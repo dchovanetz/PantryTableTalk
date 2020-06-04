@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import banner from '../../assets/banner-img.png'
 
 
 class Navbar extends Component {
@@ -39,7 +37,7 @@ class Navbar extends Component {
                 </ul>
                 </div>
                 </nav>
-                <img src="ptt-app/public/assets/banner-img.png" alt="Bastrop Country Food Pantry Banner" />
+                <img src={banner} alt="Bastrop Country Food Pantry Banner" />
             </div>
 
             )    
