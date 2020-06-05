@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import RecipeApp from '../pages/recipe-homepage/RecipeApp';
 import LoginApp from '../pages/login-page/LoginApp';
 
-
 class Navbar extends Component {
         render(){
         return (
@@ -18,7 +17,7 @@ class Navbar extends Component {
                         <li className="nav-item">
                             <Link className="nav-link" to ="/">RECIPES</Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <a className="nav-link" href="https://www.bastropfoodpantry.org/contact/">CONTACT US</a>
                         </li>
                         <li className="nav-item">
