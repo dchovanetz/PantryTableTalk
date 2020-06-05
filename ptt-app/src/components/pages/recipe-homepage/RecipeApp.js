@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from '../../layout/Navbar';
+
 
 const RecipeApp = () => (
     <div>
