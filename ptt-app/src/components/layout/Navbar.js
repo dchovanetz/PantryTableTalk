@@ -15,7 +15,7 @@ class Navbar extends Component {
                             <a className="nav-link" href="https://www.bastropfoodpantry.org/">BASTROP COUNTY FOOD PANTRY</a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to ="/">RECIPES</Link>
+                            <Link className="nav-link" to ="/recipe">RECIPES</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="https://www.bastropfoodpantry.org/contact/">CONTACT US</a>
@@ -27,7 +27,7 @@ class Navbar extends Component {
                 </nav>
                 <img src={banner} alt="Bastrop County Food Pantry Banner" width="100%" height="15%"/>
             </div>
-            <Route path="/" component= { RecipeApp } />
+            <Route path="/recipe" component= { RecipeApp } />
             <Route path="/login" component= { LoginApp } />
           </Router>
             )    
