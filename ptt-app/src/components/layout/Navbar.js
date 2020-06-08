@@ -12,13 +12,13 @@ class Navbar extends Component {
                 <nav className="navbar navbar-dark bg-dark">
                     <ul className="nav">
                         <li className="nav-item">
-                            <a className="nav-link" href="https://www.bastropfoodpantry.org/">BASTROP COUNTY FOOD PANTRY</a>
+                            <a className="nav-link" href="https://www.bastropfoodpantry.org/">HOME</a>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to ="/recipe">RECIPES</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://www.bastropfoodpantry.org/contact/">CONTACT US</a>
+                            <a className="nav-link" href="https://www.bastropfoodpantry.org/contact/">CONTACT & LOCATION</a>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to ="/login">LOGIN</Link>
