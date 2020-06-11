@@ -1,15 +1,15 @@
 import React from 'react';
-import banner from '../../assets/banner-img.png';
-import logo from '../../assets/pantry-logo.png'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import RecipeApp from '../pages/recipe-homepage/RecipeApp';
 import './Footer.css'
 
 
 function Footer () {
     return (
-      <Router>
         <div className="footerComponent" width="100%">
+        <div class="row">
+            <div id="greenLine" class="col-sm"></div>
+            <div id="blueLine" class="col-sm"></div>
+            <div id="goldLine" class="col-sm"></div>
+        </div>
             <nav id= "footer" className="navbar navbar-dark bg-dark text-light sticky-bottom">
                 <ul id="footer-list" className="nav">
                     <li className="nav-item">
@@ -27,7 +27,6 @@ function Footer () {
                 </ul>
             </nav>
         </div>
-      </Router>
         )    
 }
 
