@@ -1,3 +1,7 @@
+nav {
+    background-color: #333;;
+}
+
 #navbar-logo {
     max-width: 8.5%;
     height: auto;
@@ -15,6 +19,6 @@ ul {
     letter-spacing: 0.1em;
 }
 
-.nav-link:hover {
+ul:hover {
     color:#337ab7;
 }

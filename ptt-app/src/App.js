@@ -1,19 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 
 
 
 
-class App extends Component {
-  render () {
+function App () {
     return (
-    <Navbar />
-    
+    <div>
+      <Navbar />
+      <Footer />
+    </div>
+  
   )
 }
-}
+
 
 export default App;

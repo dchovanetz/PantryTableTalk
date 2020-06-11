@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import banner from '../../assets/banner-img.png';
 import logo from '../../assets/pantry-logo.png'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import RecipeApp from '../pages/recipe-homepage/RecipeApp';
 import './Navbar.css'
 
-class Navbar extends Component {
-        render(){
+function Navbar () {
         return (
           <Router>
             <div className="navbarComponent" width="100%">
@@ -32,6 +31,6 @@ class Navbar extends Component {
           </Router>
             )    
     }
-}
+
 
 export default Navbar
