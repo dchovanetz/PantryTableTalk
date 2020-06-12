@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import banner from '../../assets/banner-img.png'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import RecipeApp from '../pages/recipe-homepage/RecipeApp';
-import LoginApp from '../pages/login-page/LoginApp';
+// import LoginApp from '../pages/login-page/LoginApp';
 
 class Navbar extends Component {
         render(){
@@ -28,7 +28,7 @@ class Navbar extends Component {
                 <img src={banner} alt="Bastrop County Food Pantry Banner" width="100%" height="15%"/>
             </div>
             <Route path="/recipe" component= { RecipeApp } />
-            <Route path="/login" component= { LoginApp } />
+            {/* <Route path="/login" component= { LoginApp } /> */}
           </Router>
             )    
     }

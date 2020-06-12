@@ -10,7 +10,11 @@ import Navbar from './components/layout/Navbar';
 class App extends Component {
   render () {
     return (
-    <Navbar />
+    // <Navbar />
+
+    <div>
+      <h1>HEY</h1>
+    </div>
     
   )
 }
