@@ -1,23 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
 // import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/layout/Navbar';
+import axios from "axios";
+import "./App.css";
+import Navbar from "./components/layout/Navbar";
 
+function App() {
+  const handleClick = () => {
+    console.log("I am the handleClick");
+    axios
+      .get("/test")
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error))
+      .finally(() => console.log("FINALLY HERE"));
+  };
 
-
-
-
-class App extends Component {
-  render () {
-    return (
-   
+  return (
     <div>
-       <Navbar />
-      <h1>HELLO FROM REACT</h1>
+      <Navbar />
+      <form>
+        <button onClick={handleClick}>Click Me</button>
+      </form>
     </div>
-    
-  )
-}
+  );
 }
 
 export default App;
