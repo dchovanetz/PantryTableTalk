@@ -18,6 +18,7 @@ function App() {
     <div>
       <Navbar />
       <form>
+        <input type="text"></input>
         <button onClick={handleClick}>Click Me</button>
       </form>
     </div>
