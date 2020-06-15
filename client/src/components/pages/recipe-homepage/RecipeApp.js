@@ -1,11 +1,10 @@
 import React, {useState} from "react";
 import axios from 'axios'
 
-function App() (
+const RecipeApp = () => {
 
   const initialState = {
     ingredients: ""
-
   }
 
   const [formData, setFormData] = useState(initialState)
@@ -13,7 +12,6 @@ function App() (
   const resetFields = () => {
     setFormData(initialState)
   }
-
 
   const handleSubmit = (event) =>{
     event.preventDefault()
@@ -30,21 +28,20 @@ function App() (
     })
   }
 
-  
   let {ingredients} = formData;
   
-  return (
+  return(
     <div>
     <div>
         <h1>This is the recipe homepage</h1>
     </div>
     <div>
     <input placeholder="Enter ingredients"></input>
-    <button>Submit</button>
+    <button placeholder="Submit">Submit</button>
     </div>
     </div>
   )
-)
+  }
 
 
 export default RecipeApp;
