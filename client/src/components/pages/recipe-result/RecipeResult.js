@@ -6,7 +6,7 @@ import RecipeImg from './RecipeImg'
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 class RecipeResult extends Component {
     render(){
-        const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
+        const {topicTag, servingSize, nutritionFacts, ingredients, instructions, videoUrl} = this.props;//assuming that we can get this from consuming APIs
         //do we need to map out the ingredients
         return (
             <div className="recipe-card">    

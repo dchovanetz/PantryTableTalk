@@ -6,6 +6,8 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as serviceWorker from "./serviceWorker";
 import Navbar from "./components/layout/Navbar";
+import RecipeApp from './components/pages/recipe-homepage/RecipeApp';
+
 
 ReactDOM.render(
   <React.StrictMode>
