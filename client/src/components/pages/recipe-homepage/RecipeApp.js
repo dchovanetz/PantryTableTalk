@@ -15,7 +15,7 @@ const RecipeApp = () => {
 
   const handleSubmit = (event) =>{
     event.preventDefault()
-    axios.post('/new', formData)
+    axios.post('/test', formData)
     .then(response => console.log('Response data: ', response.data))
     .catch(err => console.log('Error: ', err))
     resetFields()
@@ -35,9 +35,14 @@ const RecipeApp = () => {
     <div>
         <h1>This is the recipe homepage</h1>
     </div>
-    <div>
-    <input placeholder="Enter ingredients"></input>
-    <button placeholder="Submit">Submit</button>
+
+      <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="fname">Search:  </label>
+        <input type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
+        <button type="submit">SUBMIT</button>
+        <button type='reset' onClick={resetFields}>RESET</button>
+       </form>
     </div>
     </div>
   )

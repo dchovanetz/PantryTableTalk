@@ -5,10 +5,10 @@ import './Footer.css'
 function Footer () {
     return (
         <div className="footerComponent" width="100%">
-        <div class="row">
-            <div id="greenLine" class="col-sm"></div>
-            <div id="blueLine" class="col-sm"></div>
-            <div id="goldLine" class="col-sm"></div>
+        <div className="row">
+            <div id="greenLine" className="col-sm"></div>
+            <div id="blueLine" className="col-sm"></div>
+            <div id="goldLine" className="col-sm"></div>
         </div>
             <nav id= "footer" className="navbar navbar-dark bg-dark text-light sticky-bottom">
                 <ul id="footer-list" className="nav">
