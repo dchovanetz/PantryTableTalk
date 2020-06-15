@@ -12,8 +12,8 @@ function App () {
     return (
     <div>
       <Navbar />
-      <Footer />
       <RecipeApp />
+      <Footer />
     </div>
   
   )
