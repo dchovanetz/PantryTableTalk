@@ -20,14 +20,13 @@ const recipe11 = "nabos-con-aceitunas"
 const url = "https://www.centraltexasfoodbank.org/recipe/"
 
 app.post("/test", (req, res) => {
-  recipeScraper(`${url}/${recipe11}`)
+  recipeScraper(`${url}/${recipe10}`)
   .then(recipe => {
-  console.log(recipe)
   res.json({recipe})
-.then(err => {
+  .then(err => {
   console.log(err)
-})
-})
+    })
+  })
 });
 
 
