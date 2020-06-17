@@ -16,7 +16,15 @@ const RecipeApp = () => {
   const handleSubmit = (event) =>{
     event.preventDefault()
     axios.post('/test', formData)
-    .then(response => console.log('Response data: ', response.data))
+    .then(response => 
+      console.log('Ingredients: ', response.data.recipe.ingredients))
+    .catch(err => console.log('Error: ', err))
+    resetFields()
+
+
+    axios.post('/test', formData)
+    .then(response => 
+        console.log('Instructions: ', response.data.recipe.instructions))
     .catch(err => console.log('Error: ', err))
     resetFields()
   }
@@ -26,7 +34,7 @@ const RecipeApp = () => {
         ...formData,
         [event.target.name] : event.target.value
     })
-  }
+    }
 
   let {ingredients} = formData;
   
@@ -38,12 +46,15 @@ const RecipeApp = () => {
 
       <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="fname">Search:  </label>
+        <label htmlFor="ingredients">Search:  </label>
         <input type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
         <button type="submit">SUBMIT</button>
         <button type='reset' onClick={resetFields}>RESET</button>
        </form>
     </div>
+
+  <h1></h1>
+
     </div>
   )
   }
