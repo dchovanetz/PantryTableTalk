@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
 const recipeScraper = require("recipe-scraper");
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const QRCode = require("qrcode");
+
+const items = require('./routes/api/itemsRoutes')
 
 const port = process.env.PORT || 5000;
 
@@ -24,7 +28,8 @@ const recipe11 = "nabos-con-aceitunas"
 
 const url = "https://www.centraltexasfoodbank.org/recipe/"
 
-
+//Body Parser middleware
+app.use(bodyParser.json());
 
 app.get("/test", (req, res) => {
     recipeScraper(`${url}/${recipe10}`)
@@ -38,6 +43,13 @@ app.get("/test", (req, res) => {
     res.json({message: "Hello from server.js! ;)"})
 });
 
+mongoose
+  .connect('mongodb://localhost:27017/Pantry_Talk', { useNewUrlParser: true, useUnifiedTopology: true})
+  .then(() => console.log("MongoDB connected...."))
+  .catch(err => console.log(err));
+
+// Use Routes
+app.use('/api/itemsRoutes', items); // on top on file
 
 
 app.listen(port, () => console.log(`App listening on port ${port}`))
