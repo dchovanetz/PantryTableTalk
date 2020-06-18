@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 // import './Recipe.css'
 // import RecipeImg from './RecipeImg'
-import YoutubeVideo from '../../layout/YoutubeVideo';
 
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 class RecipeResult extends Component {
     render(){
-        const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
+        // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
         //do we need to map out the ingredients
         return (
             <div className="recipe-card">    
@@ -25,7 +24,6 @@ class RecipeResult extends Component {
                 <div>
                     <img className="nutrition-facts" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fda.gov%2Ffood%2Fnew-nutrition-facts-label%2Fcalories-new-nutrition-facts-label&psig=AOvVaw1RFVOQmaAww6qxmbXiABkx&ust=1592584823583000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjUlPjmi-oCFQAAAAAdAAAAABAD" alt="Nutrition Facts"/>
                 </div>
-                <YoutubeVideo />
             </div>
             )    
     }
