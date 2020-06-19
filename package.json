@@ -27,6 +27,7 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.19",
     "qrcode": "^1.4.4",
     "recipe-scraper": "^1.20.2"
   }
