@@ -21,13 +21,12 @@ const RecipeApp = () => {
       console.log('Ingredients: ', response.data.recipe.ingredients)
       let ingredients = response.data.recipe.ingredients
       console.log(ingredients)
-      let ingredientsList = []
       ingredients.forEach(ingredient => {
         const ingredientItem = <h1>{ingredient}</h1>
         ingredientsList.push(ingredientItem)
         console.log(ingredientsList)
       })
-      setFormData(ingredientsList)
+      // setFormData(ingredientsList)
       console.log(formData) //returns an empty array
       let displayData = formData.map(el => {
         return <li>el.ingredients</li>
@@ -45,6 +44,8 @@ const RecipeApp = () => {
   //   .catch(err => console.log('Error: ', err))
   //   resetFields()
   // }
+
+  const ingredientsList = []
 
   const handleChange = (event)=>{
     setFormData({
@@ -73,7 +74,7 @@ const RecipeApp = () => {
       <div>
   {}
       </div>
-{displayData}
+{ingredientsList}
     </div>
   )
 }
