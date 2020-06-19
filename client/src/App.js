@@ -10,12 +10,13 @@ import RecipeApp from './components/pages/recipe-homepage/RecipeApp';
 
 function App () {
     return (
+  <Router>
     <div>
       <Navbar />
       <RecipeApp />
       <Footer />
     </div>
-  
+  </Router>
   )
 }
 
