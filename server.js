@@ -27,24 +27,6 @@ const recipe11 = "nabos-con-aceitunas"
 
 const url = "https://www.centraltexasfoodbank.org/recipe/"
 
-app.post("/test", (req, res) => {
-  recipeScraper(`${url}/${recipe10}`)
-  .then(recipe => {
-  res.json({recipe})
-  .then(err => {
-//Body Parser middleware
-app.use(bodyParser.json());
-
-app.get("/test", (req, res) => {
-    recipeScraper(`${url}/${recipe10}`)
-.then(recipe => {
-  console.log(recipe)
-})
-.then(err => {
-  console.log(err)
-    })
-  })
-});
 
 mongoose
   .connect('mongodb://localhost:27017/Pantry_Talk', { useNewUrlParser: true, useUnifiedTopology: true})
