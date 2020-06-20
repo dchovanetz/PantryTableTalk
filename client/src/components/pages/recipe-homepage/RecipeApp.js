@@ -1,5 +1,14 @@
 import React, {useState} from "react";
 import axios from 'axios'
+import RecipeImg from './RecipeImg'
+
+
+
+
+
+
+
+
 
 const RecipeApp = () => {
 
@@ -59,7 +68,7 @@ const RecipeApp = () => {
   return(
     <div>
       <div>
-          <h1>This is the recipe homepage</h1>
+        < RecipeImg />
       </div>
 
       <div>
@@ -76,6 +85,9 @@ const RecipeApp = () => {
       </div>
 {ingredientsList}
     </div>
+
+
+
   )
 }
 

@@ -18,7 +18,7 @@ function Navbar () {
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/">HOME</a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to ="/recipe">RECIPES</Link>
+                            <Link className="nav-link text-white" to ="/">RECIPES</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/contact/">CONTACT & LOCATION</a>

@@ -6,11 +6,7 @@ import React, { Component } from 'react';
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 class RecipeResult extends Component {
     render(){
-<<<<<<< HEAD
-        const {topicTag, servingSize, nutritionFacts, ingredients, instructions, videoUrl} = this.props;//assuming that we can get this from consuming APIs
-=======
         // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
->>>>>>> 1d6c04bbb2658b3e0b12124eb6695815a5add67e
         //do we need to map out the ingredients
         return (
             <div className="recipe-card">    
