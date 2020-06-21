@@ -11,14 +11,18 @@ function Navbar () {
             <div className="navbarComponent" width="100%">
                 <nav className="navbar navbar-dark bg-dark text-light">
                     <a className="navbar-brand" href="https://www.bastropfoodpantry.org/">
-                    <img id="navbar-logo" src={logo} alt="Bastrop County Food Pantry Logo" />
+                    {/* <img id="navbar-logo" src={logo} alt="Bastrop County Food Pantry Logo" /> */}
                     </a>
+                    <img class='top_logo' src={logo} alt="Bastrop County Food Pantry Logo" />
                     <ul className="nav mr-auto">
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/">HOME</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link className="nav-link text-white" to ="/">RECIPES</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-white" to ="/">SHOPPING LIST</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/contact/">CONTACT & LOCATION</a>
