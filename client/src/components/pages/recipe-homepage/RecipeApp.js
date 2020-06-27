@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import axios from 'axios'
 import RecipeImg from './RecipeImg'
+import './RecipeApp.css'
+
 
 
 
@@ -67,17 +69,19 @@ const RecipeApp = () => {
 
   return(
     <div>
+
+
       <div>
-        < RecipeImg />
+        <form class='form' onSubmit={handleSubmit} >
+          <label class='test1' htmlFor="ingredients">Search:  </label>
+          <input class='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
+          <button class='btn1' type="submit">SUBMIT</button>
+          <button class='btn1' type='reset' onClick={resetFields}>RESET</button>
+        </form>
       </div>
 
       <div>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="ingredients">Search:  </label>
-          <input type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
-          <button type="submit">SUBMIT</button>
-          <button type='reset' onClick={resetFields}>RESET</button>
-        </form>
+        < RecipeImg />
       </div>
 
       <div>
