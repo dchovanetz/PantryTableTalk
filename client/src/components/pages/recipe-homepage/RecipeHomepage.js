@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import RecipeSearch from "./RecipeSearch";
 import RecipeSearchResults from "./RecipeSearchResults.js"
-import RecipeResult from "../recipe-result/RecipeResult";
+import RecipeImg from "./RecipeImg"
+import RecipeResultsApp from "../recipe-result/RecipeResultsApp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function RecipeHomepage() {
@@ -13,8 +14,8 @@ function RecipeHomepage() {
       <RecipeSearch />
       {/* Switches between the search results and the individual recipe result */}
       <Switch>
-      <Route exact path="/recipes/" component={RecipeSearchResults} />
-      <Route exact path="/recipes/recipe-result" component={RecipeResult} />
+      <Route exact path="/recipes" component={RecipeImg} />
+      <Route exact path="/recipes/recipe-result" component={RecipeResultsApp} />
       </Switch>
     </div>
     

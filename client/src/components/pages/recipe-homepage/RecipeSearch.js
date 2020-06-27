@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import RecipeImg from "./RecipeImg";
 
-const RecipeApp = () => {
+const RecipeSearch = () => {
   const initialState = {
     ingredients: [],
   };
@@ -79,4 +79,4 @@ const RecipeApp = () => {
   );
 };
 
-export default RecipeApp;
+export default RecipeSearch;
