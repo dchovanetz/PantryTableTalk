@@ -22,10 +22,9 @@ const recipe3 = "swiss-chard-lentils"
 const recipe4 = "carrot-raisin-salad"
 const recipe5 = "breakfast-banana-split"
 const recipe6 = "pineapple-beet-smoothie"
-const recipe10= "turnips-olives"
 const recipe11 = "nabos-con-aceitunas"
 
-const url = "https://www.centraltexasfoodbank.org/recipe/"
+// const url = "https://www.centraltexasfoodbank.org/recipe/"
 
 
 mongoose
@@ -35,6 +34,17 @@ mongoose
 
 // Use Routes
 app.use('/api/itemsRoutes', items); // on top on file
+
+
+const url = 'https://www.centraltexasfoodbank.org/recipe/chicken-lettuce-wraps';
+recipeScraper(url)
+  .then((recipe) => {
+    console.log(recipe);
+    res.json(recipe);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 
 app.listen(port, () => console.log(`App listening on port ${port}`))
