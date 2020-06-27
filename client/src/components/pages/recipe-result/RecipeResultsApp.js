@@ -1,5 +1,5 @@
 import React from 'react';
-import YoutubeVideo from './YoutubeVideo';
+import YoutubeVideo from '../../layout/YoutubeVideo';
 import RecipeResult from './RecipeResult';
 
 
@@ -7,9 +7,9 @@ function RecipeResultsApp () {
     return (
 
         <div>
-            <YoutubeVideo />
+            <h1>This is the recipe result page</h1>
             <RecipeResult />
-            
+            <YoutubeVideo />
         </div>
     
       )
