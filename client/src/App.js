@@ -9,11 +9,6 @@ import ShoppingList from './components/pages/shopping-list/ShoppingList';
 import RecipeHomepage from './components/pages/recipe-homepage/RecipeApp';
 
 
-
-
-
-
-
 function App () {
     return (
   <Router>
