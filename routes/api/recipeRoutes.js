@@ -1,26 +1,25 @@
 // Routes to the api for items and updating mongo model
-// ItemsRoutes is where the routes/express router are used
+// RecipeRoutes is where the routes/express router are used
 const express = require('express');
 const router = express.Router();
 
-// ItemModel from mongoose model
-const ItemModel = require('../../models/itemModel');
+// RecipeModel from mongoose model
+const RecipeModel = require('../../models/recipeModel');
 
-// @route GET api/items
-// @desc Get all items
+// @route GET api/recipes
+// @desc Get all recipes
 // @access Public
 router.get('/', (req, res) => {
-    ItemModel.find()
+    RecipeModel.find()
         .sort({ date: -1 }) // sort dates in decending order
-        .then(items => res.json(items))
+        .then(recipes => res.json(recipes))
 })
 
 // @route POST api/items
 // @desc Create an item
 // @access Public
 router.post('/', (req, res) => {
-    const newItem = new ItemModel({
-
+    const newRecipe = new RecipeModel({
         name: req.body.name
     });
     
@@ -32,7 +31,7 @@ router.post('/', (req, res) => {
 // @desc DELETE a Item
 // @access Public
 router.delete('/:id', (req, res) => {
-    ItemModel.findById(req.params.id)
+    RecipeModel.findById(req.params.id)
         .then(item => item.remove().then(() => res.json({success: true})))
         .catch(err => res.status(404).json({success: false}))
 })

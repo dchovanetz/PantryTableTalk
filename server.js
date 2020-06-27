@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const QRCode = require("qrcode");
 
 const items = require('./routes/api/itemsRoutes');
+const recipes = require('./routes/api/recipeRoutes');
 
 const port = process.env.PORT || 5000;
 
@@ -28,6 +29,7 @@ mongoose
 
 // Use Routes
 app.use('/api/itemsRoutes', items); // on top on file
+app.use('/api/recipeRoutes', recipes); // on top on file
 
 //test for push
 
