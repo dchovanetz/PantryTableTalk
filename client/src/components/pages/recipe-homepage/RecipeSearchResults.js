@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import RecipeImg from "./RecipeImg";
+import './RecipeApp.css'
 
 function RecipeSearchResults() {
   const myStyles = {
