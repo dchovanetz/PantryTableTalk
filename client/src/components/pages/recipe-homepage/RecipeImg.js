@@ -1,16 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import RecipeResult from "../recipe-result/RecipeResult";
+import { BrowserRouter as Router, Route, Link, useRouteMatch } from 'react-router-dom'
 
 //Title, img
-class RecipeImg extends Component {    
-    render() {
-        const {title, img } = this.props
+function RecipeImg () {    
+        //placeholders until we can get data through props & scraper
+        const img = "https://www.centraltexasfoodbank.org/sites/default/files/Creamy%20Tomato%20Soup_0.jpg"
+        const title = "Creamy Tomato Soup"
+        let match = useRouteMatch(); 
+
+        // const {title, img } = this.props
         return (
             <div className="recipe-image-card"> 
-              <h4 className="recipe-title">{title}</h4>
-              <img className="recipe-img" src={img} alt={title} />
+              <Link className="recipe-title" to ="recipes/recipe-result">{title}</Link>
+              <Link className="recipe-title" to ="recipes/recipe-result"><img className="recipe-img" src={img} alt={title} /></Link>
+
             </div>
+
+
+     
         )
-    }
+
 }
 
 export default RecipeImg;
