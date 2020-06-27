@@ -10,11 +10,15 @@ const items = require('./routes/api/itemsRoutes');
 const port = process.env.PORT || 5000;
 
 
-
-
-
-
 const recipeUrl = "https://www.centraltexasfoodbank.org/recipe/garden-avocado-dip"
+
+recipeScraper(recipeUrl)
+.then(recipe => {
+  console.log(recipe)
+})
+.catch(error => {
+  console.log(error)
+})
 
 
 mongoose
