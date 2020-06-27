@@ -22,7 +22,7 @@ function Navbar () {
                             <Link className="nav-link text-white" to ="/">RECIPES</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to ="/">SHOPPING LIST</Link>
+                            <Link className="nav-link text-white" to ="/shoppinglist">SHOPPING LIST</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/contact/">CONTACT & LOCATION</a>

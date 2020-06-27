@@ -37,7 +37,7 @@ app.use('/api/itemsRoutes', items); // on top on file
 
 //test for push
 
-const url = 'https://www.centraltexasfoodbank.org/recipe/chicken-lettuce-wraps';
+const url = 'https://www.centraltexasfoodbank.org/recipe/swiss-chard-lentils';
 recipeScraper(url)
   .then((recipe) => {
     console.log(recipe);
