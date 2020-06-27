@@ -7,7 +7,7 @@ import './Navbar.css'
 
 function Navbar () {
         return (
-          <Router>
+       
             <div className="navbarComponent" width="100%">
                 <nav className="navbar navbar-dark bg-dark text-light">
                     <a className="navbar-brand" href="https://www.bastropfoodpantry.org/">
@@ -19,10 +19,10 @@ function Navbar () {
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/">HOME</a>
                         </li> */}
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to ="/">RECIPES</Link>
+                            <Link className="nav-link text-white" to ="/recipes">RECIPES</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-white" to ="/">SHOPPING LIST</Link>
+                            <Link className="nav-link text-white" to ="/shoppinglist">SHOPPING LIST</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/contact/">CONTACT & LOCATION</a>
@@ -31,8 +31,7 @@ function Navbar () {
                 </nav>
                 <img src={banner} alt="Bastrop County Food Pantry Banner" width="100%" height="15%"/>
             </div>
-            <Route path="/recipe" component= { RecipeApp } />
-          </Router>
+ 
             )    
     }
 

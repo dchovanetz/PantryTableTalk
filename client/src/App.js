@@ -3,10 +3,9 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import RecipeResultApp from './components/pages/recipe-result/RecipeResultApp';
+import { BrowserRouter as Router, Switch, Route, Link , Redirect} from 'react-router-dom'
 import ShoppingList from './components/pages/shopping-list/ShoppingList';
-import RecipeHomepage from './components/pages/recipe-homepage/RecipeApp';
+import RecipeHomepage from './components/pages/recipe-homepage/RecipeHomepage';
 
 
 function App () {
@@ -15,8 +14,9 @@ function App () {
     <div>
       <Navbar />
       <Switch>
-      <Route exact path="/" component= { RecipeHomepage } />
-      <Route path="/reciperesult" component= { RecipeResultApp } />
+        <Redirect exact from="/" to="/recipes"></Redirect>
+      <Route path="/recipes" component= { RecipeHomepage } />
+    
       <Route path="/shoppinglist" component= { ShoppingList } />
       </Switch>
       <Footer />

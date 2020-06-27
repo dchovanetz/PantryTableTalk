@@ -8,11 +8,9 @@ function RecipeSearchResults() {
     justifyContent: "center",
   };
   return (
-    <div style={myStyles}>
+    <div>
       {/* eventually spread out other recipes */}
 
-      <RecipeImg />
-      <RecipeImg />
       <RecipeImg />
     </div>
   );
