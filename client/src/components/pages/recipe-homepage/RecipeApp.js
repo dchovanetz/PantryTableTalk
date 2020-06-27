@@ -4,14 +4,6 @@ import RecipeImg from './RecipeImg'
 import './RecipeApp.css'
 
 
-
-
-
-
-
-
-
-
 const RecipeApp = () => {
 
   const initialState = {
@@ -68,9 +60,6 @@ const RecipeApp = () => {
   
 
   return(
-    <div>
-
-
       <div>
         <form class='form' onSubmit={handleSubmit} >
           <label class='test1' htmlFor="ingredients">Search:  </label>
@@ -79,19 +68,6 @@ const RecipeApp = () => {
           <button class='btn1' type='reset' onClick={resetFields}>RESET</button>
         </form>
       </div>
-
-      <div>
-        < RecipeImg />
-      </div>
-
-      <div>
-  {}
-      </div>
-{ingredientsList}
-    </div>
-
-
-
   )
 }
 
