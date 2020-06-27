@@ -19,10 +19,10 @@ router.get('/', (req, res) => {
 // @desc Create an item
 // @access Public
 router.post('/', (req, res) => {
-    const newItem = new ItemModel({ // Item is the model
+    const newItem = new ItemModel({
         name: req.body.name
     });
-
+    
     newItem.save() // To save new item to DB
         .then(item => res.json(item)) // to spit that item out as JSON
 })
@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
 // @desc DELETE a Item
 // @access Public
 router.delete('/:id', (req, res) => {
-    Item.findById(req.params.id)
+    ItemModel.findById(req.params.id)
         .then(item => item.remove().then(() => res.json({success: true})))
         .catch(err => res.status(404).json({success: false}))
 })

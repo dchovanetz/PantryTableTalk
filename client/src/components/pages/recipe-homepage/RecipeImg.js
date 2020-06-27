@@ -19,21 +19,21 @@ class RecipeImg extends Component {
   <Card className='test' style={{margin:'2rem'}}>
     <Card.Img className = 'macaroni' variant="top" src={macaroni} />
     <Card.Body className = 'link'>
-    <Card.Link class='link' href="#">Macaroni and Cheese Recipe</Card.Link>
+    <Card.Link class='link' href="/recipes/recipe-result">Macaroni and Cheese Recipe</Card.Link>
     </Card.Body>
   </Card>
 
   <Card style={{margin:'2rem'}}>
   <Card.Img className = 'macaroni' variant="top" src={chicken_tortilla} />
     <Card.Body className = 'link'>
-    <Card.Link class='link' href="#">Chicken Tortilla Soup Recipe</Card.Link>
+    <Card.Link class='link' href="/recipes/recipe-result">Chicken Tortilla Soup Recipe</Card.Link>
     </Card.Body>
   </Card>
 
   <Card style={{margin:'2rem'}}>
   <Card.Img className = 'macaroni' variant="top" src={kimchi} />
     <Card.Body className = 'link'>
-    <Card.Link class='link' href="#">Kimchi Grilled Cheese Recipe</Card.Link>
+    <Card.Link class='link' href="/recipes/recipe-result">Kimchi Grilled Cheese Recipe</Card.Link>
     </Card.Body>
   </Card>
 </CardDeck>
@@ -42,21 +42,21 @@ class RecipeImg extends Component {
   <Card style={{margin:'2rem'}}>
     <Card.Img className = 'macaroni' variant="top" src={fish} />
     <Card.Body className = 'link'>
-    <Card.Link class='link' href="#">Fish Tacos Recipe</Card.Link>
+    <Card.Link class='link' href="/recipes/recipe-result">Fish Tacos Recipe</Card.Link>
     </Card.Body>
   </Card>
 
   <Card class='test1' style={{margin:'2rem'}}>
   <Card.Img className = 'macaroni' variant="top" src={fish} />
     <Card.Body className = 'link'>
-    <Card.Link class='link' href="#">Chili Recipe</Card.Link>
+    <Card.Link class='link' href="/recipes/recipe-result">Chili Recipe</Card.Link>
     </Card.Body>
   </Card>
 
   <Card style={{margin:'2rem'}}>
   <Card.Img className = 'macaroni' variant="top" src={caesar} />
     <Card.Body className = 'link'>
-    <Card.Link class='link' href="#">Grilled Chicken Caesar Salad Recipe</Card.Link>
+    <Card.Link class='link' href="/recipes/recipe-result">Grilled Chicken Caesar Salad Recipe</Card.Link>
     </Card.Body>
   </Card>
 </CardDeck>
