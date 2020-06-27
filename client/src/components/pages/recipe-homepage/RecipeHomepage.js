@@ -3,7 +3,7 @@ import axios from "axios";
 import RecipeSearch from "./RecipeSearch";
 import RecipeSearchResults from "./RecipeSearchResults.js"
 import RecipeImg from "./RecipeImg"
-import RecipeResultsApp from "../recipe-result/RecipeResultsApp";
+import RecipeResultsApp from "../recipe-result/RecipeResultApp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function RecipeHomepage() {
