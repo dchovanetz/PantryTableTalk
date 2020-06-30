@@ -1,3 +1,4 @@
+require('dotenv').config(); // for .env w/ db password
 const express = require("express");
 const app = express();
 const recipeScraper = require("recipe-scraper");
@@ -6,7 +7,10 @@ const bodyParser = require('body-parser');
 const QRCode = require("qrcode");
 
 const items = require('./routes/api/itemsRoutes');
+const recipes = require('./routes/api/recipeRoutes');
 
+//const db_name = process.env.DB_NAME
+//const pwd = process.env.PWD 
 const port = process.env.PORT || 5000;
 
 
@@ -19,7 +23,13 @@ recipeScraper(recipeUrl)
 .catch(error => {
   console.log(error)
 })
-
+/*
+"mongodb+srv://ACCBootcampRecipe:<password>@cluster0-6o8hs.mongodb.net/<dbname>?retryWrites=true&w=majority"
+*/
+//The path to access will be:
+/* `mongodb+srv://ACCBootcampRecipe:W${pwd}@cluster0-6o8hs.mongodb.net/${db_name}?retryWrites=true&w=majority`
+DB_NAME and PWD are in .env file. npm install dotenv
+*/
 
 mongoose
   .connect('mongodb://localhost:27017/Pantry_Talk', { useNewUrlParser: true, useUnifiedTopology: true})
@@ -27,7 +37,8 @@ mongoose
   .catch(err => console.log(err));
 
 // Use Routes
-app.use('/api/itemsRoutes', items); // on top on file
+app.use('/api/itemsRoutes', items); // on top of file
+app.use('/api/recipeRoutes', recipes); // on top of file
 
 //test for push
 
