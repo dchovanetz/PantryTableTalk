@@ -9,7 +9,7 @@ const RecipeModel = require('../../models/recipeModel');
 // @route GET api/recipes
 // @desc Get all recipes
 // @access Public
-router.get('/', (req, res) => {
+router.get('/recipes', (req, res) => {
     RecipeModel.find()
         .sort({ date: -1 }) // sort dates in decending order
         .then(recipes => res.json(recipes))
@@ -18,19 +18,19 @@ router.get('/', (req, res) => {
 // @route POST api/items
 // @desc Create an item
 // @access Public
-router.post('/', (req, res) => {
+router.post('/newRecipe', (req, res) => {
     const newRecipe = new RecipeModel({
         name: req.body.name
     });
     
-    newItem.save() // To save new item to DB
-        .then(item => res.json(item)) // to spit that item out as JSON
+    newRecipe.save() // To save new item to DB
+        .then(recipe => res.json(recipe)) // to spit that item out as JSON
 })
 
 // @route DELETE api/items/:id
 // @desc DELETE a Item
 // @access Public
-router.delete('/:id', (req, res) => {
+router.delete('recipes/:id', (req, res) => {
     RecipeModel.findById(req.params.id)
         .then(item => item.remove().then(() => res.json({success: true})))
         .catch(err => res.status(404).json({success: false}))

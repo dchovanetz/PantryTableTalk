@@ -4,6 +4,13 @@ import RecipeImg from "./RecipeImg";
 import './RecipeApp.css'
 
 function RecipeSearchResults() {
+
+  //create axios call to get stuff from data base
+
+  
+
+
+
   const myStyles = {
     display: "flex",
     justifyContent: "center",
@@ -11,7 +18,7 @@ function RecipeSearchResults() {
   return (
     <div>
       {/* eventually spread out other recipes */}
-
+      {/* Right now, there are  */}
       <RecipeImg />
     </div>
   );

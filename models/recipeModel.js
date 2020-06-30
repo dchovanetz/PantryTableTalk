@@ -7,14 +7,6 @@ const RecipeSchema = new Schema({
     name: {
         type: String,
         required: true
-    },
-    ingredients: {
-        type: Array,
-        required: true
-    },
-    instructions: {
-        type: Array,
-        required: true
     }
 });
 
