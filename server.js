@@ -11,16 +11,20 @@ const recipes = require('./routes/api/recipeRoutes');
 const port = process.env.PORT || 5000;
 
 
-const recipeUrl = "https://www.centraltexasfoodbank.org/recipe/garden-avocado-dip"
+//Body Parser middleware
+app.use(bodyParser.json());
 
-recipeScraper(recipeUrl)
+app.get("/test", (req, res) => {
+    recipeScraper(`${url}/${recipe10}`)
 .then(recipe => {
   console.log(recipe)
 })
-.catch(error => {
-  console.log(error)
+.then(err => {
+  console.log(err)
 })
 
+    res.json({message: "Hello from server.js! ;)"})
+});
 
 mongoose
   .connect('mongodb://localhost:27017/Pantry_Talk', { useNewUrlParser: true, useUnifiedTopology: true})
