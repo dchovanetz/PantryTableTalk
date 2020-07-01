@@ -20,7 +20,9 @@ router.get('/', (req, res) => {
 // @access Public
 router.post('/', (req, res) => {
     const newItem = new ItemModel({
-        name: req.body.name
+        name: req.body.name,
+        ingredients: req.body.ingredients,
+        instructions: req.body.instructions
     });
     
     newItem.save() // To save new item to DB
