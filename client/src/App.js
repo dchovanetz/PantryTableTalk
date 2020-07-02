@@ -8,11 +8,6 @@ import ShoppingList from './components/pages/shopping-list/ShoppingList';
 import RecipeHomepage from './components/pages/recipe-homepage/RecipeHomepage';
 
 
-
-
-
-
-
 function App () {
     return (
   <Router>
