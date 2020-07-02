@@ -14,8 +14,11 @@ function RecipeHomepage() {
   let url = "http://localhost:5000/api/recipeRoutes/";
   axios
     .get(url)
-    .then((response) => {
-      console.log(response.data);
+    .then(response => {
+      return response.data
+    })
+    .then(recipes => {
+      console.log(recipes)
     })
     .catch((error) => {
       console.log(error);
