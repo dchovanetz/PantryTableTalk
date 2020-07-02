@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
-import './RecipeImg.css'
+import './RecipeCard.css'
 import macaroni from '../../../assets/macaroni_cheese2.jpg'
 import chicken_tortilla from '../../../assets/chicken_tortilla.jpg'
 import kimchi from '../../../assets/kimchi_grilled_cheese.jpg'
@@ -10,7 +10,7 @@ import fish from '../../../assets/grilled_fish_tacos.jpg'
 import caesar from '../../../assets/caesar_salad.jpg'
 
 //Title, img
-class RecipeImg extends Component {    
+class RecipeCard extends Component {    
     render() {
         return(
 <div class='card-deck'>
@@ -70,7 +70,7 @@ class RecipeImg extends Component {
     }
 }
 
-export default RecipeImg;
+export default RecipeCard;
 
 
 

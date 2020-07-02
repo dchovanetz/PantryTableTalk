@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import './Recipe.css'
-// import RecipeImg from './RecipeImg'
+import Ingredients from './ingredients'
 
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
@@ -15,7 +15,7 @@ class RecipeResult extends Component {
                 <div className="recipe-card-content">
                     <span className="serving-size">serving size</span>
                     <h4>Ingredients:</h4>
-                    <p className="ingredients">Ingredients</p>
+                    < Ingredients />
                     <h4>Instructions:</h4>
                     <p>Step 1</p>
                     <p>Step 2</p>

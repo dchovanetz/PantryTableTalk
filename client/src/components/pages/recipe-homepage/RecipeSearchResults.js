@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import RecipeImg from "./RecipeImg";
+import RecipeCard from "./RecipeCard";
 import './RecipeApp.css'
 
 function RecipeSearchResults() {
@@ -12,7 +12,7 @@ function RecipeSearchResults() {
     <div>
       {/* eventually spread out other recipes */}
 
-      <RecipeImg />
+      <RecipeCard />
     </div>
   );
 }
