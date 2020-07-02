@@ -61,11 +61,11 @@ const RecipeSearch = () => {
 
   return(
       <div>
-        <form class='form' onSubmit={handleSubmit} >
-          <label class='test1' htmlFor="ingredients">Search:  </label>
-          <input class='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
-          <button class='btn1' type="submit">SUBMIT</button>
-          <button class='btn1' type='reset' onClick={resetFields}>RESET</button>
+        <form className='form' onSubmit={handleSubmit} >
+          <label className='test1' htmlFor="ingredients">Search:  </label>
+          <input className='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
+          <button className='btn1' type="submit">SUBMIT</button>
+          <button className='btn1' type='reset' onClick={resetFields}>RESET</button>
         </form>
       </div>
   )
