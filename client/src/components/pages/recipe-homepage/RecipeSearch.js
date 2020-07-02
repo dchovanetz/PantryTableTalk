@@ -1,83 +1,75 @@
-import React, { useState } from "react";
-import axios from "axios";
-import RecipeImg from "./RecipeImg";
-import './RecipeApp.css'
+import React, {useState} from "react";
+import axios from 'axios'
+import RecipeCard from './RecipeCard'
+import './RecipeSearch.css'
+
 
 const RecipeSearch = () => {
-  const initialState = {
-    ingredients: [],
-  };
 
-  const [formData, setFormData] = useState(initialState);
+  const initialState = {
+    ingredients: []
+  }
+
+  const [formData, setFormData] = useState(initialState)
 
   const resetFields = () => {
-    setFormData(initialState);
-  };
+    setFormData(initialState)
+  }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (event) =>{
+    event.preventDefault()
 
-    axios
-      .post("/test", formData)
-      .then((response) => {
-        console.log("Ingredients: ", response.data.recipe.ingredients);
-        let ingredients = response.data.recipe.ingredients;
-        console.log(ingredients);
-        ingredients.forEach((ingredient) => {
-          const ingredientItem = <h1>{ingredient}</h1>;
-          ingredientsList.push(ingredientItem);
-          console.log(ingredientsList);
-        });
-        // setFormData(ingredientsList)
-        console.log(formData); //returns an empty array
-        let displayData = formData.map((el) => {
-          return <li>el.ingredients</li>;
-        });
+    axios.get('/test', formData)
+    .then(response => {
+      console.log('Ingredients: ', response.data.recipe.name)
+      let ingredients = response.data.recipe.name
+      console.log(ingredients)
+      ingredients.forEach(ingredient => {
+        const ingredientItem = <h1>{ingredient}</h1>
+        ingredientsList.push(ingredientItem)
+        console.log(ingredientsList)
       })
-      .catch((err) => console.log("Error: ", err));
-    resetFields();
-  };
-
+      // setFormData(ingredientsList)
+      console.log(formData) //returns an empty array
+      let displayData = formData.map(el => {
+        return <li>el.ingredients</li>
+      })
+      
+      }
+    )      
+    .catch(err => console.log('Error: ', err))
+    resetFields()
+  }
+      
   //   axios.post('/test', formData)
-  //   .then(response =>
+  //   .then(response => 
   //       console.log('Instructions: ', response.data.recipe.instructions))
   //   .catch(err => console.log('Error: ', err))
   //   resetFields()
   // }
 
-  const ingredientsList = [];
+  const ingredientsList = []
 
-  const handleChange = (event) => {
+  const handleChange = (event)=>{
     setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
+        ...formData,
+        [event.target.name] : event.target.value
+    })}
 
-  let { ingredients } = formData;
+  let {ingredients} = formData;
+  
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="ingredients">Search: </label>
-        <input
-          type="text"
-          placeholder="Enter ingredients"
-          name="ingredients"
-          id="ingredients"
-          value={ingredients}
-          onChange={handleChange}
-        />
-        <button type="submit">SUBMIT</button>
-        <button type="reset" onClick={resetFields}>
-          RESET
-        </button>
-      </form>
+  return(
+      <div>
+        <form class='form' onSubmit={handleSubmit} >
+          <label class='test1' htmlFor="ingredients">Search:  </label>
+          <input class='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
+          <button class='btn1' type="submit">SUBMIT</button>
+          <button class='btn1' type='reset' onClick={resetFields}>RESET</button>
+        </form>
+      </div>
+  )
+}
 
-      <div>{}</div>
-      {ingredientsList}
-    </div>
-  );
-};
 
 export default RecipeSearch;
