@@ -7,6 +7,12 @@ import RecipeResultsApp from "../recipe-result/RecipeResultApp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function RecipeHomepage() {
+
+
+
+
+
+  
   return (
       <div>
         {/* Recipe Search stays on top of recipe page so user can easily search for something else */}
@@ -15,7 +21,6 @@ function RecipeHomepage() {
       <Switch>
       <Route exact path="/recipes" component={RecipeCard} />
       <Route exact path="/recipes/recipe-result" component={RecipeResultsApp} />
-      <Route exact path="/recipemaker" component= { RecipeMaker } />
       </Switch>
     </div>
 
