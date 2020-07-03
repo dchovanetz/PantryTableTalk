@@ -3,6 +3,7 @@ import axios from "axios";
 import RecipeSearch from "./RecipeSearch";
 import RecipeSearchResults from "./RecipeSearchResults.js";
 import RecipeCard from "./RecipeCard";
+import RecipeMaker from "./RecipeMaker"
 import RecipeResultsApp from "../recipe-result/RecipeResultApp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -12,6 +13,8 @@ function RecipeHomepage() {
   const [recipeData, setRecipeData] = useState(initialState);
 
   let url = "http://localhost:5000/api/recipeRoutes/";
+  
+  let myRecipes = {}
   axios
     .get(url)
     .then(response => {
@@ -23,6 +26,8 @@ function RecipeHomepage() {
     .catch((error) => {
       console.log(error);
     });
+
+
 
 
   return (
@@ -37,6 +42,7 @@ function RecipeHomepage() {
           path="/recipes/recipe-result"
           component={RecipeResultsApp}
         />
+        <Route exact path="/recipes/recipe-maker" component={RecipeMaker}/>
       </Switch>
     </div>
   );
