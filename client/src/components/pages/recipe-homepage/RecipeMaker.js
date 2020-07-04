@@ -4,21 +4,15 @@ import RecipeCard from "./RecipeCard";
 
 
 const RecipeMaker = () => {
-  const initialState = {
-    ingredients: [],
-  };
-
-  const [formData, setFormData] = useState(initialState);
-
-  const resetFields = () => {
-    setFormData(initialState);
-  };
-
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    //url will be obtained through the form eventually
+    const recipeUrl = "https://www.centraltexasfoodbank.org/recipe/creamy-tomato-soup"
+    //API route to POST
+    let url = "http://localhost:5000/api/recipeRoutes/recipeMaker";
     axios
-      .post("/scrapeRecipe", formData)
+      .post(url, {recipeUrl: recipeUrl})
       .then((response) => {
         console.log(response)
       })
@@ -39,7 +33,7 @@ const RecipeMaker = () => {
   return (
     <div >
       <h1>Make a new Recipe Here!</h1>
-      <form onSubmit={handleSubmit} style={makerStyles}>
+      <form onSubmit={handleSubmit} style={makerStyles} action="/recipeMaker">
         
         <label htmlFor="ingredients">Submit  a URL to make new recipe: </label>
         <input
@@ -47,12 +41,12 @@ const RecipeMaker = () => {
           placeholder="Recipe URL"
           name="recipe"
         />
-        <label htmlFor="ingredients">Please add a YouTube URL if it applies </label>
+        {/* <label htmlFor="ingredients">Please add a YouTube URL if it applies </label>
         <input
           type="text"
           placeholder="YouTube URL"
           name="youtube"
-        />
+        /> */}
         <button type="submit">SUBMIT</button>
       </form>
     </div>
