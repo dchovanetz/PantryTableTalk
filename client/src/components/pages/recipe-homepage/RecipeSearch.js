@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import axios from "axios";
-import RecipeCard from "./RecipeCard";
-import './RecipeApp.css'
-=======
 import React, {useState} from "react";
 import axios from 'axios'
 import RecipeCard from './RecipeCard'
 import './RecipeSearch.css'
 
->>>>>>> 9dbfb36e855e1f632269cda3dd2cdd66b561b971
 
 const RecipeSearch = () => {
 
