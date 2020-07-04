@@ -6,7 +6,7 @@ import macaroni from '../../../assets/macaroni_cheese2.jpg'
 import chicken_tortilla from '../../../assets/chicken_tortilla.jpg'
 import kimchi from '../../../assets/kimchi_grilled_cheese.jpg'
 import fish from '../../../assets/grilled_fish_tacos.jpg'
-import chili from '../../../assets/chili.jpg'
+// import chili from '../../../assets/chili.jpg'
 import caesar from '../../../assets/caesar_salad.jpg'
 
 //Title, img
@@ -46,12 +46,12 @@ class RecipeCard extends Component {
     </Card.Body>
   </Card>
 
-  <Card className='test1' style={{margin:'2rem'}}>
+  {/* <Card className='test1' style={{margin:'2rem'}}>
   <Card.Img className = 'macaroni' variant="top" src={chili} />
     <Card.Body className = 'link'>
     <Card.Link className='link' href="/recipes/recipe-result">Chili Recipe</Card.Link>
     </Card.Body>
-  </Card>
+  </Card> */}
 
   <Card style={{margin:'2rem'}}>
   <Card.Img className = 'macaroni' variant="top" src={caesar} />
