@@ -37,8 +37,8 @@ router.post("/recipeMaker", (req, res) => {
   })
   .then(newRecipe => {
     console.log(newRecipe)
-    // newRecipe.save() // To save new recipe to DB
-    //     .then(recipe => res.json(recipe)) // to spit that recipe out as JSON
+    newRecipe.save() // To save new recipe to DB
+        .then(recipe => res.json(recipe)) // to spit that recipe out as JSON
   });
 
  

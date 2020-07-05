@@ -26,7 +26,7 @@ const RecipeSearch = () => {
       let ingredients = response.data.ingredients
       console.log(ingredients)
       ingredients.forEach(ingredient => {
-        const ingredientItem = <h1>{ingredient}</h1>
+        const ingredientItem = <li>{ingredient}</li>
         ingredientsList.push(ingredientItem)
       })
       setFormData(ingredientsList)
@@ -60,20 +60,22 @@ const RecipeSearch = () => {
   // })
 
   return(
-      <div>
-        <form className='form' onSubmit={handleSubmit} >
-          <label className='test1' htmlFor="ingredients">Search:  </label>
-          <input className='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" 
-          // value={ingredients} 
-          onChange={handleChange} />
-          <button className='btn1' type="submit">SUBMIT</button>
-          <button className='btn1' type='reset' onClick={resetFields}>RESET</button>
-        </form>
-        <ul>
-        { formData.map(el => el) }
-        </ul>
-      </div>
-  )
+    <div>
+      <form className='form' onSubmit={handleSubmit} >
+        <label className='test1' htmlFor="ingredients">Search:  </label>
+        <input className='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" 
+        // value={ingredients} 
+        onChange={handleChange} />
+        <button className='btn1' type="submit">SUBMIT</button>
+        <button className='btn1' type='reset' onClick={resetFields}>RESET</button>
+      </form>
+      <h1>Ingredients:
+      <ul>
+      { formData.map(el => el) }
+      </ul>
+      </h1>
+    </div>
+)
 }
 
 
