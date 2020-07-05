@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.get("/test", (req, res) => {
 recipeScraper("https://www.centraltexasfoodbank.org/recipe/creamy-tomato-soup")
   .then((recipe) => {
+    res.send(recipe)
     console.log(recipe);
   })
   .then((err) => {
