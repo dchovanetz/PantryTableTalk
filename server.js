@@ -30,6 +30,27 @@ recipeScraper("https://www.centraltexasfoodbank.org/recipe/cheesy-macaroni-bake"
     })
   });
 
+
+app.get('/demo', (req, res) => {
+  console.log('A request made on /demo')
+  let fakeRecipe = [{
+    title: 'Mac and Cheese',
+    image: 'https://www.cookingclassy.com/wp-content/uploads/2018/07/stovetop-macaroni-cheese-1.jpg',
+    id: 122
+  }]
+  res.send(fakeRecipe)
+})
+
+
+app.post('/getUniqueRecipe', (req, res) => {
+  console.log(req.body.id)
+  res.send({
+    title: 'Mac and Cheese',
+    image: 'https://www.cookingclassy.com/wp-content/uploads/2018/07/stovetop-macaroni-cheese-1.jpg',
+    id: 122,
+    cook: 'microwave 50 minutes'
+  })
+})
     /*
 "mongodb+srv://ACCBootcampRecipe:<password>@cluster0-6o8hs.mongodb.net/<dbname>?retryWrites=true&w=majority"
 */
