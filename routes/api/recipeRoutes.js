@@ -20,23 +20,30 @@ router.get("/", (req, res) => {
 // @desc Create a recipe
 // @access Public
 router.post("/recipeMaker", (req, res) => {
-  console.log(req.body);
-  recipeScraper(req.body.recipeUrl).then((recipe) => {
-    console.log(recipe);
+  
+  recipeScraper(req.body.recipeUrl)
+  .then(recipe => {
+    
+    let newRecipe = new RecipeModel({
+      name: recipe.name,
+      ingredients: recipe.ingredients,
+      instructions: recipe.instructions,
+      time: recipe.time,
+      servings: recipe.servings,
+      image: recipe.image,
+    });
+    return newRecipe
+
+  })
+  .then(newRecipe => {
+    console.log(newRecipe)
+    // newRecipe.save() // To save new recipe to DB
+    //     .then(recipe => res.json(recipe)) // to spit that recipe out as JSON
   });
 
-  // const newRecipe = new RecipeModel({
-  //   name: recipe.name,
-  //   ingredients: recipe.ingredients,
-  //   instructions: recipe.instructions,
-  //   time: recipe.time,
-  //   servings: recipe.servings,
-  //   image: recipe.image,
-  // });
+ 
 
-  // newRecipe
-  //   .save() // To save new recipe to DB
-  //   .then((recipe) => res.json(recipe)); // to spit that recipe out as JSON
+
 });
 
 // @route DELETE api/recipes/:id

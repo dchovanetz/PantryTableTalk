@@ -8,18 +8,25 @@ const RecipeMaker = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     //url will be obtained through the form eventually
-    const recipeUrl = "https://www.centraltexasfoodbank.org/recipe/creamy-tomato-soup"
+
     //API route to POST
     let url = "http://localhost:5000/api/recipeRoutes/recipeMaker";
-    console.log(event.target.value)
-    
+    //where we'll get the recipe URL from the form
+    let recipeInput = event.target.recipeInput.value
+
+    //need checks to see if input is valid
+    //does it have centraltexasfoodbank domain?
+    //is it a string?
+
+
     axios
-      .post(url, {recipeUrl: event.target.value})
+      .post(url, {recipeUrl: recipeInput})
       .then((response) => {
         console.log(response)
       })
       .catch((err) => console.log("Error: ", err));
-  
+    
+    recipeInput = ""
   };
 
   const makerStyles = {
@@ -42,6 +49,7 @@ const RecipeMaker = () => {
           type="text"
           placeholder="Recipe URL"
           name="recipe"
+          id="recipeInput"
         />
         {/* <label htmlFor="ingredients">Please add a YouTube URL if it applies </label>
         <input
