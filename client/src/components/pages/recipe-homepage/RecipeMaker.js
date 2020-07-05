@@ -11,8 +11,10 @@ const RecipeMaker = () => {
     const recipeUrl = "https://www.centraltexasfoodbank.org/recipe/creamy-tomato-soup"
     //API route to POST
     let url = "http://localhost:5000/api/recipeRoutes/recipeMaker";
+    console.log(event.target.value)
+    
     axios
-      .post(url, {recipeUrl: recipeUrl})
+      .post(url, {recipeUrl: event.target.value})
       .then((response) => {
         console.log(response)
       })
@@ -33,7 +35,7 @@ const RecipeMaker = () => {
   return (
     <div >
       <h1>Make a new Recipe Here!</h1>
-      <form onSubmit={handleSubmit} style={makerStyles} action="/recipeMaker">
+      <form onSubmit={handleSubmit} style={makerStyles} action="/recipeMaker" method="post">
         
         <label htmlFor="ingredients">Submit  a URL to make new recipe: </label>
         <input
