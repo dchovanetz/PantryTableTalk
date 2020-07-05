@@ -1,6 +1,9 @@
 require("dotenv").config(); // for .env w/ db password
 const express = require("express");
+var cors = require("cors")
 const app = express();
+app.use(cors())
+
 const recipeScraper = require("recipe-scraper");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
