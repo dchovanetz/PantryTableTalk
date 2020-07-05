@@ -18,22 +18,21 @@ const RecipeSearch = () => {
 
   const handleSubmit = (event) =>{
     event.preventDefault()
-
+    const ingredientsList = []
     axios.get('/test', formData)
     .then(response => {
-      console.log('Ingredients: ', response.data.recipe.name)
-      let ingredients = response.data.recipe.name
+      // console.log('Ingredients: ', response.data.recipe.ingredients)
+      let ingredients = response.data.recipe.ingredients
       console.log(ingredients)
       ingredients.forEach(ingredient => {
-        const ingredientItem = <h1>{ingredient}</h1>
+        const ingredientItem = <h1>{ingredients}</h1>
         ingredientsList.push(ingredientItem)
-        console.log(ingredientsList)
       })
-      // setFormData(ingredientsList)
-      console.log(formData) //returns an empty array
-      let displayData = formData.map(el => {
-        return <li>el.ingredients</li>
-      })
+      setFormData(ingredientsList)
+      // console.log(ingredientsList)
+      // let displayData = formData.map(el => {
+      //   return <li>el.ingredients</li>
+      // })
       
       }
     )      
@@ -48,7 +47,6 @@ const RecipeSearch = () => {
   //   resetFields()
   // }
 
-  const ingredientsList = []
 
   const handleChange = (event)=>{
     setFormData({
@@ -58,15 +56,21 @@ const RecipeSearch = () => {
 
   let {ingredients} = formData;
   
+  // let displayData = formData.map(el => {
+  //   return <li>el.ingredients</li>
+  // })
 
   return(
       <div>
-        <form class='form' onSubmit={handleSubmit} >
-          <label class='test1' htmlFor="ingredients">Search:  </label>
-          <input class='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
-          <button class='btn1' type="submit">SUBMIT</button>
-          <button class='btn1' type='reset' onClick={resetFields}>RESET</button>
+        <form className='form' onSubmit={handleSubmit} >
+          <label className='test1' htmlFor="ingredients">Search:  </label>
+          <input className='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
+          <button className='btn1' type="submit">SUBMIT</button>
+          <button className='btn1' type='reset' onClick={resetFields}>RESET</button>
         </form>
+        <ul>
+        {/* {displayData} */}
+        </ul>
       </div>
   )
 }
