@@ -1,6 +1,9 @@
 require("dotenv").config(); // for .env w/ db password
 const express = require("express");
+var cors = require("cors")
 const app = express();
+app.use(cors())
+
 const recipeScraper = require("recipe-scraper");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -20,7 +23,6 @@ app.get("/test", (req, res) => {
 recipeScraper("https://www.centraltexasfoodbank.org/recipe/creamy-tomato-soup")
   .then((recipe) => {
     console.log(recipe);
-    res.json({recipe: recipe})
   })
   .then((err) => {
     console.log(err);
@@ -45,6 +47,7 @@ mongoose
   })
   .then(() => console.log("MongoDB connected...."))
   .catch((err) => console.log(err));
+
 
 // Use Routes
 app.use("/api/itemsRoutes", items); // on top of file
