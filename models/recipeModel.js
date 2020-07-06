@@ -35,7 +35,7 @@ const RecipeSchema = new Schema({
     type: String,
   },
   youTube_Url: {
-    type: String,
+    type: String, default:"https://www.youtube.com/embed/wS8R5Bq9aFg?cc_load_policy=1"
   },
   dateAdded: {
     type: Date,
