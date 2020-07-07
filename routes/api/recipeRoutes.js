@@ -12,7 +12,8 @@ const recipeScraper = require("recipe-scraper");
 // @access Public
 router.get("/", (req, res) => {
   RecipeModel.find()
-    .sort({ dateAdded: -1 }) // sort dates in descending order
+//    .sort({ dateAdded: -1 }) // sort dates in descending order
+    .sort({ name: 1 }) // sort dates in ascending alphabetical order
     .then((recipes) => res.json(recipes));
 });
 
@@ -31,6 +32,9 @@ router.post("/recipeMaker", (req, res) => {
       time: recipe.time,
       servings: recipe.servings,
       image: recipe.image,
+      youTube_Url: recipe.youTube_Url,
+      serving_size: recipe.serving_size,
+      qrcode: recipe.qrcode
     });
     return newRecipe
 
@@ -39,11 +43,8 @@ router.post("/recipeMaker", (req, res) => {
     console.log(newRecipe)
     newRecipe.save() // To save new recipe to DB
         .then(recipe => res.json(recipe)) // to spit that recipe out as JSON
+        .catch((err) => console.log('Not saved to db: ' + err))
   });
-
- 
-
-
 });
 
 // @route DELETE api/recipes/:id

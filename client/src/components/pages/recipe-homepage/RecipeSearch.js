@@ -5,26 +5,28 @@ import './RecipeSearch.css'
 
 const RecipeSearch = () => {
 
-  const initialState = {
-    ingredients: []
-  }
+  // const initialState = {
+  //   ingredients: []
+  // }
 
-  const [formData, setFormData] = useState(initialState)
+  const [formData, setFormData] = useState([])
 
   const resetFields = () => {
-    setFormData(initialState)
+    setFormData([])
   }
 
   const handleSubmit = (event) =>{
     event.preventDefault()
+    console.log('function fired')
     const ingredientsList = []
-    axios.get('/test', formData)
+    axios.get('/test')
     .then(response => {
+      console.log('made it here')
       // console.log('Ingredients: ', response.data.recipe.ingredients)
-      let ingredients = response.data.recipe.ingredients
+      let ingredients = response.data.ingredients
       console.log(ingredients)
       ingredients.forEach(ingredient => {
-        const ingredientItem = <h1>{ingredients}</h1>
+        const ingredientItem = <li>{ingredient}</li>
         ingredientsList.push(ingredientItem)
       })
       setFormData(ingredientsList)
@@ -32,11 +34,9 @@ const RecipeSearch = () => {
       // let displayData = formData.map(el => {
       //   return <li>el.ingredients</li>
       // })
-      
       }
     )      
     .catch(err => console.log('Error: ', err))
-    resetFields()
   }
       
   //   axios.post('/test', formData)
@@ -53,25 +53,29 @@ const RecipeSearch = () => {
         [event.target.name] : event.target.value
     })}
 
-  let {ingredients} = formData;
+  // let {ingredients} = formData;
   
   // let displayData = formData.map(el => {
   //   return <li>el.ingredients</li>
   // })
 
   return(
-      <div>
-        <form className='form' onSubmit={handleSubmit} >
-          <label className='test1' htmlFor="ingredients">Search:  </label>
-          <input className='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" value={ingredients} onChange={handleChange} />
-          <button className='btn1' type="submit">SUBMIT</button>
-          <button className='btn1' type='reset' onClick={resetFields}>RESET</button>
-        </form>
-        <ul>
-        {/* {displayData} */}
-        </ul>
-      </div>
-  )
+    <div>
+      <form className='form' onSubmit={handleSubmit} >
+        <label className='test1' htmlFor="ingredients">Search:  </label>
+        <input className='test' type="text" placeholder="Enter ingredients" name="ingredients" id="ingredients" 
+        // value={ingredients} 
+        onChange={handleChange} />
+        <button className='btn1' type="submit">SUBMIT</button>
+        <button className='btn1' type='reset' onClick={resetFields}>RESET</button>
+      </form>
+      <h1>Ingredients:
+      <ul>
+      { formData.map(el => el) }
+      </ul>
+      </h1>
+    </div>
+)
 }
 
 

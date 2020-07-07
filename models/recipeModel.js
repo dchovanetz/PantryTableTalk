@@ -7,7 +7,7 @@ const RecipeSchema = new Schema({
   name: {
     type: String,
     required: [true, "Recipe must have a name"],
-    unique: true,
+  //  unique: true,
   },
   ingredients: {
     type: [String], //array
@@ -34,13 +34,17 @@ const RecipeSchema = new Schema({
   image: {
     type: String,
   },
-  youTube_Url: {
-    type: String,
+  youTube_Url: {    // temp video, replace with actual path
+    type: String, 
+    default:"https://www.youtube.com/embed/wS8R5Bq9aFg?cc_load_policy=1",      
   },
   dateAdded: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
+  qrcode: {
+    type: String
+  }
 });
 
 // mongoose.model(collection, schema)
