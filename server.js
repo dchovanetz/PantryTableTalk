@@ -60,19 +60,4 @@ app.use("/api/recipeRoutes", recipes); // on top of file
 
 //test for push
 
-<<<<<<< HEAD
-const url = 'https://www.centraltexasfoodbank.org/recipe/swiss-chard-lentils';
-recipeScraper(url)
-  .then((recipe) => {
-    console.log(recipe);
-    res.json(recipe);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
-
-app.listen(port, () => console.log(`App listening on port ${port}`))
-=======
 app.listen(port, () => console.log(`App listening on port ${port}`));
->>>>>>> 9dbfb36e855e1f632269cda3dd2cdd66b561b971
