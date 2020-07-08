@@ -9,7 +9,7 @@ function RecipeResultsApp () {
         <div>
            <YoutubeVideo />
             
-            <RecipeResult />
+            <RecipeResult  />
             
         </div>
     
