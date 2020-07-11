@@ -56,7 +56,7 @@ mongoose
 
 // Use Routes
 app.use("/api/itemsRoutes", items); // on top of file
-app.use("/api/recipeRoutes", recipes); // on top of file
+app.use("/api/recipes", recipes); // on top of file
 
 //test for push
 
