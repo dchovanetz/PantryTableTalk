@@ -10,20 +10,20 @@ const RecipeMaker = () => {
     //API route to POST
     let url = "http://localhost:5000/api/recipes/recipeMaker";
     //where we'll get the recipe URL from the form
-    let recipeInput = event.target.recipeInput.value;
 
     //need checks to see if input is valid
     //does it have centraltexasfoodbank domain?
     //is it a string?
 
     axios
-      .post(url, { recipeUrl: recipeInput })
+      .post(url, {
+        recipeUrl: event.target.recipeInput.value,
+        youtubeUrl: event.target.youtubeInput.value,
+      })
       .then((response) => {
         console.log(response);
       })
       .catch((err) => console.log("Error: ", err));
-
-    recipeInput = "";
   };
 
   const makerStyles = {
@@ -51,12 +51,15 @@ const RecipeMaker = () => {
           name="recipe"
           id="recipeInput"
         />
-        {/* <label htmlFor="ingredients">Please add a YouTube URL if it applies </label>
+        <label htmlFor="ingredients">
+          Please add a YouTube URL if it applies{" "}
+        </label>
         <input
           type="text"
           placeholder="YouTube URL"
           name="youtube"
-        /> */}
+          id="youtubeInput"
+        />
         <button type="submit">SUBMIT</button>
       </form>
     </div>
