@@ -11,7 +11,7 @@ const ItemModel = require('../../models/itemModel');
 // @access Public
 router.get('/', (req, res) => {
     ItemModel.find()
-        .sort({ date: -1 }) // sort dates in decending order
+        .sort({ date: -1 }) // sort dates in descending order
         .then(items => res.json(items))
 })
 
