@@ -19,28 +19,10 @@ const port = process.env.PORT || 5000;
 //Body Parser middleware
 app.use(bodyParser.json());
 
-app.get("/test", (req, res) => {
-///recipeScraper("https://www.centraltexasfoodbank.org/recipe/cheesy-macaroni-bake")
-recipeScraper("https://www.centraltexasfoodbank.org/recipe/strawberry-basil-infused-water")
-// recipeScraper("https://www.centraltexasfoodbank.org/recipe/chicken-lettuce-wraps")
-// recipeScraper("https://www.centraltexasfoodbank.org/recipe/zucchini-noodles")
-// recipeScraper("https://www.centraltexasfoodbank.org/recipe/peanut-butter-hummus")
-// recipeScraper("https://www.centraltexasfoodbank.org/recipe/overnight-oats")
-// recipeScraper("https://www.centraltexasfoodbank.org/recipe/grilled-cheese-mushroom-spinach-and-tomato") //
-  .then((recipe) => {
-    res.send(recipe)
-    console.log(JSON.stringify(recipe));
-  })
-  .then((err) => {
-    console.log(err);
-    })
-  });
 
-/* The path to access will be:
-"mongodb+srv://ACCBootcampRecipe:<password>@cluster0-6o8hs.mongodb.net/<dbname>?retryWrites=true&w=majority"
+// DB_NAME and DB_PWD are in .env file. */
 
-DB_NAME and DB_PWD are in .env file. */
-
+// URL to access our shared DB
 let mongoUrl = `mongodb+srv://ACCBootcampRecipe:${db_pwd}@cluster0-6o8hs.mongodb.net/${db_name}?retryWrites=true&w=majority`
 
 //console.log('----mongoUrl: ' + mongoUrl) 
