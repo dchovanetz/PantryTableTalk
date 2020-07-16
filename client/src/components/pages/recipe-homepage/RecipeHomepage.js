@@ -34,8 +34,10 @@ function RecipeHomepage() {
 
       <Switch>
         <Route exact path="/recipes">
-          {recipeData.map((recipe) => {
+        <div class='row' >
+           {recipeData.map((recipe,index) => {
             return (
+              
               <RecipeCard
                 title={recipe.name}
                 image={recipe.image}
@@ -43,8 +45,10 @@ function RecipeHomepage() {
                 id={recipe._id}
                 dateAdded={recipe.dateAdded}
               />
+             
             );
           })}
+          </div>
         </Route>
         <Route exact path="/recipes/recipe-maker" component={RecipeMaker} />
         <Route exact path={`/recipes/:id`} component={RecipeResultsApp} />

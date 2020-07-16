@@ -41,19 +41,19 @@ function RecipeCard(props) {
         </Row>
         </Container> */}
 
-<Container className='grid'>
-  <Row>
+{/* <Container> */}
+  {/* <Row> */}
     <Card>
           <Link to={`/recipes/${props.id}`}>
             <img src={props.image} />
-          </Link>
+         
           <h3>
             {props.title}
           </h3>
-
+          </Link>
     </Card>
-  </Row>
-</Container>
+  {/* </Row> */}
+{/* </Container> */}
 
     </div>
   );
