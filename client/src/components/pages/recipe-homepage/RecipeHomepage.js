@@ -24,7 +24,6 @@ function RecipeHomepage() {
       });
   }, [recipeData]);
 
-  console.log(recipeData);
 
   return (
     <div>
