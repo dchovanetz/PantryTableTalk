@@ -9,7 +9,6 @@ function ShoppingList (props) {
     <div id='list-container'>
         <h1>This is the shopping list</h1>
       < Ingredients />
-      <DisplayItems />
     </div>
 
   )
