@@ -15,10 +15,17 @@ function RecipeResult() {
       .catch((error) => {
         console.log(error);
       });
+        console.log(recipe);
   }, []);
 
-  console.log(recipe);
-
+  // const ingredientsList=[]
+  // let ingredients = recipe.ingredients
+  // console.log(ingredients)
+  // ingredients.forEach(ingredient => {
+  // const ingredientItem = <li>{ingredient}</li>
+  // ingredientsList.push(ingredientItem)
+  // })
+  
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
@@ -28,9 +35,9 @@ function RecipeResult() {
       <div className="recipe-card-content">
         <span className="serving-size">Servings: {recipe.servings}</span>
         <h2>Ingredients: </h2>
-        {recipe.ingredients}
+        {/* {recipe.map(el=>el)} */}
         <h2>Instructions:</h2>
-        {recipe.instructions}
+        {/* {ingredientsList} */}
       </div>
     </div>
   );
