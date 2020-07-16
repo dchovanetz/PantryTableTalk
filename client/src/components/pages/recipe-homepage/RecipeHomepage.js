@@ -6,6 +6,7 @@ import RecipeCard from "./RecipeCard";
 import RecipeMaker from "./RecipeMaker";
 import RecipeResultsApp from "../recipe-result/RecipeResultApp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { parse } from "recipe-ingredient-parser-v2"
 
 function RecipeHomepage() {
   const [recipeData, setRecipeData] = useState([]);

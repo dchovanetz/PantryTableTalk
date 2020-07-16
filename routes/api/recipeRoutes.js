@@ -35,16 +35,16 @@ router.post("/recipeMaker", (req, res) => {
         time: recipe.time,
         servings: recipe.servings,
         image: recipe.image,
-        youTube_Url: recipe.youTube_Url,
-        serving_size: recipe.serving_size,
-        qrcode: recipe.qrcode,
+        youTube_Url: req.body.youtubeUrl,
+        serving_size: recipe.serving_size 
+        // qrcode: qrcode,
       });
       return newRecipe;
     })
     .then((newRecipe) => {
       console.log(newRecipe);
       newRecipe
-        .save() // To save new recipe to DB
+        // .save() // To save new recipe to DB
         .then((recipe) => res.json(recipe)) // to spit that recipe out as JSON
         .catch((err) => console.log("Not saved to db: " + err));
     });
