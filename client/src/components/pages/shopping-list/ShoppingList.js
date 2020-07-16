@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Ingredients from '../recipe-result/ingredients'
 
-function ShoppingList () {
+function ShoppingList (props) {
+
+
     return (
 
-    <div>
+    <div id='list-container'>
         <h1>This is the shopping list</h1>
+      < Ingredients />
     </div>
 
   )
