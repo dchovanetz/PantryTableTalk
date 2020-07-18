@@ -23,7 +23,8 @@
 }
 
 .card{
-    width: 60%;
+  
+    border: 1px solid green;
 }
 
 .grid{
@@ -37,6 +38,11 @@
 
 .column{
     position: relative;
+    margin-top: 35px;
+    margin-left: 70px;
+    border: 1px solid yellow;
+    text-align: center;
+    width: 25%;
     
 }
 

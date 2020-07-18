@@ -44,7 +44,7 @@ function RecipeCard(props) {
 
 {/* <Container> */}
   {/* <Row> */}
-    <Card>
+    <Card className = 'card'>
           <Link to={`/recipes/${props.id}`}>
             <img src={props.image} />
          
