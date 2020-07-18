@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import RecipeSearch from "./RecipeSearch";
-import RecipeSearchResults from "./RecipeSearchResults.js";
+// import RecipeSearch from "./RecipeSearch";
+// import RecipeSearchResults from "./RecipeSearchResults.js";
 import RecipeCard from "./RecipeCard";
 import RecipeMaker from "./RecipeMaker";
 import "./RecipeHomepage.css";
@@ -35,7 +35,7 @@ function RecipeHomepage() {
 
       <Switch>
         <Route exact path="/recipes">
-        <div class='row' >
+        <div className='row' >
           
            {recipeData.map((recipe,index) => {
             return (

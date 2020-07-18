@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 // import CardDeck from "react-bootstrap/CardDeck";
-import CardGroup from "react-bootstrap/CardGroup";
+// import CardGroup from "react-bootstrap/CardGroup";
 import "./RecipeCard.css";
-import {Row, Col} from 'react-bootstrap'
-import Container from 'react-bootstrap/Container'
+// import {Row, Col} from 'react-bootstrap'
+// import Container from 'react-bootstrap/Container'
 
 
 //axios call
@@ -44,15 +44,16 @@ function RecipeCard(props) {
 
 {/* <Container> */}
   {/* <Row> */}
-    <Card className = 'card'>
+    <div>
           <Link to={`/recipes/${props.id}`}>
-            <img src={props.image} />
+            <img className='imgClass' src={props.image} alt = 'recipe images'
+            />
          
-          <h3>
+          <h3 className='text'>
             {props.title}
           </h3>
           </Link>
-    </Card>
+    </div>
   {/* </Row> */}
 {/* </Container> */}
 

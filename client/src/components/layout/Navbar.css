@@ -25,3 +25,9 @@ ul {
 ul:hover {
     color:#337ab7;
 }
+
+.imgbanner{
+    border-bottom-style: solid;
+    border-bottom-color:#333;
+    border-bottom-width: 35px;
+}

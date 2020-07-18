@@ -1,30 +1,9 @@
-.macaroni{
-    width: 100%;
-    height: 18vw;
-    object-fit: cover;
-}
-
-.card-deck {
-    /* border: 3px solid red; */
-    justify-content: center;
-    display: flex;
-    padding-top: 1em;
-}
-
-/* .card-deck2{
-    padding-top: 3.5em;
-} */
 
 
 .link{
     text-align: center;
     font-size: 24px;
     font-weight: 500;
-}
-
-.card{
-  
-    border: 1px solid green;
 }
 
 .grid{
@@ -37,12 +16,25 @@
 }
 
 .column{
+    display: flexbox;
     position: relative;
     margin-top: 35px;
-    margin-left: 70px;
-    border: 1px solid yellow;
+    margin-left: 0px;
+    margin-bottom: 75px;
+    /* border: 1px solid yellow; */
     text-align: center;
-    width: 25%;
-    
+    width: 27%;
 }
 
+.text{
+    color: #f0af12;
+    font-size: 24px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.imgClass{
+    border-right: 10px solid #f0af12;
+    border-bottom: 10px solid #f0af12;
+    height: 350px;
+}
