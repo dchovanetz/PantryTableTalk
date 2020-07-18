@@ -40,7 +40,7 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-      <img
+      <img className = 'imgbanner'
         src={banner}
         alt="Bastrop County Food Pantry Banner"
         width="100%"
