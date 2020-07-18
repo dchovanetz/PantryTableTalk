@@ -19,9 +19,7 @@ function FakeIngredients (props) {
   //when box is checked set value to the name on input
   const handleChecked = e => {
     console.log(e.target.checked)
-    console.log(e.target.name)
-    setIngState({ ...ingState, check: e.target.checked}) //code breaks here
-    console.log({check: e.target.checked})
+    setIngState({check: e.target.checked}) //code breaks here
   }
   return (
     <div>
