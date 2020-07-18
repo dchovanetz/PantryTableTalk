@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 // import CardDeck from "react-bootstrap/CardDeck";
 import CardGroup from "react-bootstrap/CardGroup";
 import "./RecipeCard.css";
-import macaroni from "../../../assets/macaroni_cheese2.jpg";
 import {Row, Col} from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import './Recipe.css'
-import Ingredients from './ingredients'
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 function RecipeResult() {
