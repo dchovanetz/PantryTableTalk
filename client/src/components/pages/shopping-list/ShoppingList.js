@@ -9,17 +9,19 @@ function FakeIngredients (props) {
 
   useEffect(()=> {
     let ingState = [
-      {name: 'Broccoli', chcked: false, dispaly: true, id:1},
-      {name: 'Carrots', checked: false, dispaly: true, id:2},
-      {name: 'Salt', checked: false, dispaly: true, id:3}
+      {name: 'Broccoli', check: false, dispaly: true, id:1},
+      {name: 'Carrots', check: false, dispaly: true, id:2},
+      {name: 'Salt', check: false, dispaly: true, id:3}
     ];
     setIngState(ingState)
   }, [])
 
   //when box is checked set value to the name on input
   const handleChecked = e => {
-    setIngState({checked: true}) 
-    console.log(e.target.value)
+    console.log(e.target.checked)
+    console.log(e.target.name)
+    setIngState({ ...ingState, check: e.target.checked}) //code breaks here
+    console.log({check: e.target.checked})
   }
   return (
     <div>
@@ -28,7 +30,7 @@ function FakeIngredients (props) {
         {ingState.map( i => (
           <li key={i.id}>
           <label>
-          <input type='checkbox' name={i.name} onChange={handleChecked}></input>
+          <input type='checkbox' checked={i.check} name={i.name} onChange={handleChecked}></input>
           {i.name}
           </label>
           </li>
@@ -40,7 +42,7 @@ function FakeIngredients (props) {
 }
 
 
-
+//ignore below code for now
 function ShoppingList (props) {
 //intitial state is an empty array or ingredient list with checked: false
 const [items, setItems] = useState([
