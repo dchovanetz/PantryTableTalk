@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import CardGroup from "react-bootstrap/CardGroup";
 import "./RecipeCard.css";
 // import {Row, Col} from 'react-bootstrap'
-// import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container'
 
 
 //axios call
@@ -42,9 +42,9 @@ function RecipeCard(props) {
         </Row>
         </Container> */}
 
-{/* <Container> */}
+
   {/* <Row> */}
-    <div>
+    <div className='size'>
           <Link to={`/recipes/${props.id}`}>
             <img className='imgClass' src={props.image} alt = 'recipe images'
             />
@@ -55,7 +55,7 @@ function RecipeCard(props) {
           </Link>
     </div>
   {/* </Row> */}
-{/* </Container> */}
+
 
     </div>
   );
