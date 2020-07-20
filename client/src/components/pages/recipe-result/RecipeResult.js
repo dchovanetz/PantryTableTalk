@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from "react";
+import Ingredients from "./Ingredients";
+import YoutubeVideo from "./YoutubeVideo";
 import axios from "axios";
 // import './Recipe.css'
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 function RecipeResult() {
-  const [recipe, setRecipe] = useState({});
+  const [recipe, setRecipe] = useState({
+    name: "",
+    ingredients: [],
+    instructions: [],
+    time: {},
+    servings: "",
+    serving_size: "",
+    image: "",
+    youTube_Url: "",
+    dateAdded: "",
+    qrcode: "",
+  });
+
+  // retrieves data of one recipe and sets the state
   useEffect(() => {
     axios
       .get(`http://localhost:5000/api${window.location.pathname}`)
       .then((response) => {
-        setRecipe(response.data[0]);
+        setRecipe(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
-        console.log(recipe);
   }, []);
 
-  // const ingredientsList=[]
-  // let ingredients = recipe.ingredients
-  // console.log(ingredients)
-  // ingredients.forEach(ingredient => {
-  // const ingredientItem = <li>{ingredient}</li>
-  // ingredientsList.push(ingredientItem)
-  // })
-  
+  const { ingredients, instructions, _id } = recipe;
+
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
@@ -33,10 +41,14 @@ function RecipeResult() {
       <img src={recipe.image}></img>
       <div className="recipe-card-content">
         <span className="serving-size">Servings: {recipe.servings}</span>
-        <h2>Ingredients: </h2>
-        {/* {recipe.map(el=>el)} */}
+        <Ingredients ingredients={ingredients} recipe_id={_id}/>
         <h2>Instructions:</h2>
-        {/* {ingredientsList} */}
+        <ol>
+          {instructions.map((instruction, i) => 
+            <li key={"inst" + i + _id}>{instruction}</li>
+          )}
+        </ol>
+        <YoutubeVideo />
       </div>
     </div>
   );

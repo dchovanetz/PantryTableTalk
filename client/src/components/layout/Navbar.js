@@ -1,7 +1,7 @@
 import React from "react";
 import banner from "../../assets/heading.png";
 import logo from "../../assets/pantry-logo.png";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {

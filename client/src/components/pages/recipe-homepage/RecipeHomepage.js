@@ -5,7 +5,7 @@ import axios from "axios";
 import RecipeCard from "./RecipeCard";
 import RecipeMaker from "./RecipeMaker";
 import "./RecipeHomepage.css";
-import RecipeResultsApp from "../recipe-result/RecipeResultApp";
+import RecipeResultApp from "../recipe-result/RecipeResult";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 
@@ -47,13 +47,12 @@ function RecipeHomepage() {
                 id={recipe._id}
                 dateAdded={recipe.dateAdded}
               />
-           
             );
           })}
           </div>
         </Route>
-        <Route exact path="/recipes/recipe-maker" component={RecipeMaker} />
-        <Route exact path={`/recipes/:id`} component={RecipeResultsApp} />
+        <Route path="/recipe-maker" component={RecipeMaker} />
+        <Route path="/recipes/:id" component={RecipeResultApp} />
       </Switch>
     </div>
   );
