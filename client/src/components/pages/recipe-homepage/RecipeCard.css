@@ -19,12 +19,12 @@
 
 .text{
     color: #f0af12;
-    font-size: 20px;
-    font-family: serif;
+    font-size: 18px;
+    font-family: "BrandonGrotesqueWeb-Light",Helvetica,Arial,sans-serif;
     text-transform: uppercase;
     text-align: center;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 37px;
     text-align: right;
 }
 
