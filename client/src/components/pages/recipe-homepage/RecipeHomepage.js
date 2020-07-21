@@ -35,7 +35,7 @@ function RecipeHomepage() {
 
       <Switch>
         <Route exact path="/recipes">
-        <div className='row' >
+        <div className='row layout' >
           
            {recipeData.map((recipe,index) => {
             return (

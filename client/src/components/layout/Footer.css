@@ -9,9 +9,9 @@
     margin-left: 100px;
 }
 
-/* .row2{
-    display: inline-block;
-} */
+.line{
+    width: 100%;
+}
 
 #greenLine {
     height: 4px;
