@@ -9,17 +9,25 @@
     margin-left: 100px;
 }
 
+/* .row2{
+    display: inline-block;
+} */
+
 #greenLine {
     height: 4px;
     background-color: #8bc34a;
+    width: 33%;
 }
 
 #blueLine {
     height: 4px;
     background-color: #337ab7;
+    width: 33%;
 }
 
 #goldLine {
     height: 4px;
     background-color:#e27429;
+    width: 33%;
 }
+
