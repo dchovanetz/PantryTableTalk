@@ -8,7 +8,7 @@ nav {
     /* height: 85%; what DC added in */
     position: absolute;
     /* margin: 0 10px 0 135px; */
-    margin: 4px 0 2px 150px; /*DC addition*/
+    margin: 0px 0 2px 150px; /*DC addition*/
     top: 0px;
 }
 
@@ -24,10 +24,4 @@ ul {
 
 ul:hover {
     color:#337ab7;
-}
-
-.imgbanner{
-    border-bottom-style: solid;
-    border-bottom-color:#333;
-    border-bottom-width: 35px;
 }

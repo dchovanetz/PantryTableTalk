@@ -4,8 +4,8 @@ import './Footer.css'
 
 function Footer () {
     return (
-        <div className="footerComponent" width="100%">
-        <div className="row">
+        <div className="footerComponent">
+        <div className="row line" >
             <div id="greenLine" className="col-sm"></div>
             <div id="blueLine" className="col-sm"></div>
             <div id="goldLine" className="col-sm"></div>

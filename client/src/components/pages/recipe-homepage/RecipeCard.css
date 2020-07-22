@@ -11,26 +11,30 @@
     /* position: relative; */
     /* margin-top: 35px;
     margin-left: 10pxpx;*/
-    margin-bottom: 75px; 
-    border: 1px solid yellow;
+    margin-bottom: 60px; 
+    /* border: 1px solid yellow; */
     text-align: center;
     width: 33%;
 }
 
 .text{
     color: #f0af12;
-    font-size: 24px;
+    font-size: 18px;
+    font-family: "BrandonGrotesqueWeb-Light",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
     text-align: center;
     margin-right: 20px;
+    margin-top: 37px;
+    text-align: right;
 }
 
 .imgClass{
-    border-right: 10px solid #f0af12;
-    border-bottom: 10px solid #f0af12;
-    width: 65%;
+    border-right: 12px solid #f0af12;
+    border-bottom: 12px solid #f0af12;
+    width: 95%;
 }
 
 .size{
     /* display: inline-block; */
-   width: 95%;
+   width: 100%;
 }

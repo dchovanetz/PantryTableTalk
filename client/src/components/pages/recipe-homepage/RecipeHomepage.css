@@ -1,14 +1,14 @@
-.row{
-    display: inline-block;
-    border: 1px solid blue;
-    width: 80%;
+.layout{
+    display: flex;
+    /* border: 5px solid blue; */
+    width: 58%;
     justify-content: center;
 }
 
 .recipe{
-    display: inline-block;
+    display: flex;
     margin-top: 50px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
     justify-content: center;
 }

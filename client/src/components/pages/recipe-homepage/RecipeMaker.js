@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
-import RecipeCard from "./RecipeCard";
 
 const RecipeMaker = () => {
   const handleSubmit = (event) => {

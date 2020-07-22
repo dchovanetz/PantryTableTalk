@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 
 // Get individual recipe
 router.get("/:id", (req, res) => {
-  RecipeModel.find({ _id: req.params.id }).then((recipe) => res.json(recipe));
+  RecipeModel.find({ _id: req.params.id }).then((recipe) => res.json(recipe[0]));
 });
 
 // @route POST api/recipes
@@ -44,7 +44,7 @@ router.post("/recipeMaker", (req, res) => {
     .then((newRecipe) => {
       console.log(newRecipe);
       newRecipe
-        // .save() // To save new recipe to DB
+        .save() // To save new recipe to DB
         .then((recipe) => res.json(recipe)) // to spit that recipe out as JSON
         .catch((err) => console.log("Not saved to db: " + err));
     });
