@@ -51,7 +51,7 @@ function RecipeHomepage() {
           })}
           </div>
         </Route>
-        <Route path="/recipe-maker" component={RecipeMaker} />
+        <Route path="/recipes/recipe-maker" component={RecipeMaker} />
         <Route path="/recipes/:id" component={RecipeResultApp} />
       </Switch>
     </div>
