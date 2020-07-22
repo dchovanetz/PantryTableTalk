@@ -1,4 +1,4 @@
-//foundation-->global-->more than one componenet will access
+//foundation-->global-->more than one component will access
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
