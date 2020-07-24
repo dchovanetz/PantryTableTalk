@@ -1,3 +1,8 @@
+@media screen and (max-width: 800px){
+    div.images{
+        width: 90%;
+    }
+}
 
 .link{
     text-align: center;
@@ -5,12 +10,13 @@
     font-weight: 500;
 }
 
-.column{
+.images{
     /* display: inline-block; */
     /* position: relative; */
     /* margin-top: 35px;
     margin-left: 10pxpx;*/
     margin-bottom: 60px; 
+    margin-left: 2px;
     border: 1px solid yellow;
     text-align: center;
     width: 33%;
@@ -25,6 +31,7 @@
     margin-right: 20px;
     margin-top: 15px;
     text-align: right;
+    line-height: 1.5;
 }
 
 

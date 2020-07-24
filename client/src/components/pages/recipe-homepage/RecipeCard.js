@@ -13,7 +13,7 @@ import Container from 'react-bootstrap/Container'
 //Title, img
 function RecipeCard(props) {
   return (
-    <div className='column'>
+    <div className='column images'>
     
 
   {/* <Row> */}
