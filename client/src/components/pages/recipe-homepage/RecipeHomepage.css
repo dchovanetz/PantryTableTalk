@@ -1,14 +1,14 @@
 .layout{
     display: flex;
-    /* border: 5px solid blue; */
-    width: 58%;
+    border: 5px solid blue;
+    width: 90%;
     justify-content: center;
 }
 
-.recipe{
+.recipeHomepage{
     display: flex;
     margin-top: 50px;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     width: 100%;
     justify-content: center;
 }

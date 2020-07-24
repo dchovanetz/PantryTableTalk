@@ -6,6 +6,9 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
+
+    
+
     <div className="navbarComponent" width="100%">
       <nav className="navbar navbar-dark bg-dark text-light">
         <a className="navbar-brand" 
@@ -22,7 +25,7 @@ function Navbar() {
 
         </a>
 
-        <ul className="nav mr-auto">
+        <ul className="nav mr-auto link">
           {/* <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/">HOME</a>
                         </li> */}

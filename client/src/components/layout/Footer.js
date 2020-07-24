@@ -6,9 +6,9 @@ function Footer () {
     return (
         <div className="footerComponent">
         <div className="row line" >
-            <div id="greenLine" className="col-sm"></div>
-            <div id="blueLine" className="col-sm"></div>
-            <div id="goldLine" className="col-sm"></div>
+            <div id="greenLine" className="col-md-4"></div>
+            <div id="blueLine" className="col-md-4"></div>
+            <div id="goldLine" className="col-md-4"></div>
         </div>
             <nav id= "footer" className="navbar navbar-dark bg-dark text-light sticky-bottom">
                 <ul id="footer-list" className="nav">
