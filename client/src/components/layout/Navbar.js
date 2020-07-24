@@ -43,7 +43,6 @@ function Navbar() {
         height="15%"
       />
   </div>
-
   );
 }
 
