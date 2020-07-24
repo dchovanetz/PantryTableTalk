@@ -40,9 +40,11 @@ function RecipeResult() {
     <Jumbotron className="jumbo">
     <div className="recipe-card">
       <h1 className="recipe-name">{recipe.name}</h1>
+      <span className="serving-size">Servings: {recipe.servings}</span>
+      <div className="img-repo">
       <img className="recipe-img"  src={recipe.image}></img>
+      </div>
       <div className="recipe-card-content">
-        <span className="serving-size">Servings: {recipe.servings}</span>
         <Ingredients ingredients={ingredients} recipe_id={_id}/>
         <h2 className="instructions">Instructions:</h2>
         <ol className="ol-instructions">
