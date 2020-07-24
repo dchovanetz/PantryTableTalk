@@ -1,3 +1,34 @@
 .recipe-card {
-    border: 3px solid purple
+    background-color: white;
+    
+}
+.recipe-img {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    
+    border-right: 12px solid #F0AF12;
+    border-bottom: 12px solid #F0AF12;
+}
+
+.recipe-name {
+    color:rgb(242, 169, 0);
+    font-family: BrandonGrotesqueWeb-Bold, Cambria, Georgia, serif;
+}
+
+.serving-size {
+    /* float: left;
+    clear: both; */
+    margin-left: 2em;
+    color: white;
+    background: #F0AF12;
+    padding: 0.5em 0.7em;
+}
+
+.instructions {
+    margin: 0 0 10px 1em;
+    color: #72635D;
+}
+
+.ol-instructions {
+    list-style-type: none;
 }
