@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import Ingredients from "./Ingredients";
 import YoutubeVideo from "./YoutubeVideo";
 import axios from "axios";
+<<<<<<< HEAD
 import "./RecipeResult.css";
 // import './Recipe.css'
+=======
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import './RecipeResults.css';
+>>>>>>> master
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 function RecipeResult() {
@@ -37,15 +42,26 @@ function RecipeResult() {
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
+<<<<<<< HEAD
     <div className="recipe-card ">
       <h1>{recipe.name}</h1>
       <img src={recipe.image}></img>
       <div className="recipe-card-content content">
         <span className="serving-size">Servings: {recipe.servings}</span>
         
+=======
+    <Jumbotron className="jumbo">
+    <div className="recipe-card">
+      <h1 className="recipe-name">{recipe.name}</h1>
+      <span className="serving-size">Servings: {recipe.servings}</span>
+      <div className="img-repo">
+      <img className="recipe-img"  src={recipe.image}></img>
+      </div>
+      <div className="recipe-card-content">
+>>>>>>> master
         <Ingredients ingredients={ingredients} recipe_id={_id}/>
-        <h2>Instructions:</h2>
-        <ol>
+        <h2 className="instructions">Instructions:</h2>
+        <ol className="ol-instructions">
           {instructions.map((instruction, i) => 
             <li key={"inst" + i + _id}>{instruction}</li>
           )}
@@ -53,6 +69,7 @@ function RecipeResult() {
         <YoutubeVideo />
       </div>
     </div>
+  </Jumbotron>
   );
 }
 
