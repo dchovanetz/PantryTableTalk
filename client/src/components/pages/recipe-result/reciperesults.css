@@ -13,7 +13,8 @@
 }
 
 .serving-size {
-    margin: 0 0 0 2em;
+    margin-left: 2em;
+   
     color: white;
     background: #F0AF12;
     padding: 0.5em 0.7em;
@@ -32,6 +33,8 @@
 }
 
 .recipe-name {
+    /* display: block;
+    float: right; */
     color:rgb(242, 169, 0);
     font-family: BrandonGrotesqueWeb-Bold, Cambria, Georgia, serif;
     margin-left: 0.5em;
