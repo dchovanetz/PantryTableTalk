@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Ingredients from "./Ingredients";
 import YoutubeVideo from "./YoutubeVideo";
 import axios from "axios";
+import "./RecipeResult.css";
 // import './Recipe.css'
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
@@ -36,11 +37,12 @@ function RecipeResult() {
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
-    <div className="recipe-card">
+    <div className="recipe-card ">
       <h1>{recipe.name}</h1>
       <img src={recipe.image}></img>
-      <div className="recipe-card-content">
+      <div className="recipe-card-content content">
         <span className="serving-size">Servings: {recipe.servings}</span>
+        
         <Ingredients ingredients={ingredients} recipe_id={_id}/>
         <h2>Instructions:</h2>
         <ol>
