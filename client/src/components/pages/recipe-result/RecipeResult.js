@@ -3,7 +3,7 @@ import Ingredients from "./Ingredients";
 import YoutubeVideo from "./YoutubeVideo";
 import axios from "axios";
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import './RecipeResults.css';
+import './RecipeResult.css';
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 function RecipeResult() {
