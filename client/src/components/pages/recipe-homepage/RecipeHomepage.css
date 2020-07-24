@@ -1,7 +1,7 @@
 .layout{
     display: flex;
     border: 5px solid blue;
-    width: 90%;
+    width: 75%;
     justify-content: center;
 }
 
