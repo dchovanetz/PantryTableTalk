@@ -1,3 +1,50 @@
+.jumbo {
+    width: 100vw;
+}
+
+.imgbanner {
+    margin-bottom: -2em;
+}
+
+.img-repo {
+    display: block;
+    float: right;
+    margin-right: 4em;
+}
+
+.serving-size {
+    margin: 0 0 0 2em;
+    color: white;
+    background: #F0AF12;
+    padding: 0.5em 0.7em;
+}
+
 .recipe-card {
-    border: 3px solid purple
+    background-color: white;
+    
+}
+.recipe-img {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    width: 25rem;
+    border-right: 12px solid #F0AF12;
+    border-bottom: 12px solid #F0AF12;
+}
+
+.recipe-name {
+    color:rgb(242, 169, 0);
+    font-family: BrandonGrotesqueWeb-Bold, Cambria, Georgia, serif;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+
+.instructions {
+    margin: 0 0 10px 1em;
+    color: #72635D;
+}
+
+.ol-instructions {
+    list-style-type: none;
 }

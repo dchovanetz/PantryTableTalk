@@ -3,24 +3,25 @@ nav {
 }
 
 .top_logo {
-    max-width: 8.5%;
+    max-width: 5em;
     height: auto;
     /* height: 85%; what DC added in */
     position: absolute;
     /* margin: 0 10px 0 135px; */
-    margin: 0px 0 2px 150px; /*DC addition*/
+    margin: 0px 0px 2px 50px; /*DC addition*/
     top: 0px;
 }
 
-.link {
+.navdiv {
     text-shadow: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     /* margin-left: 240px; */
-    margin-left: 25%;  /*DC addition*/
+    margin-left: 320px;  /*DC addition*/
     padding: 3px 4px 3px 4px;
-    font-size: 16px;
+    font-size: 1.2em;
     letter-spacing: 0.1em;
 }
+
 
 .link:hover {
     color:#337ab7;
