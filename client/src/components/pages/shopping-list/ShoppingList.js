@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-
+//build one piece at a time
 
 
 function FakeIngredients (props) {
@@ -16,7 +16,7 @@ function FakeIngredients (props) {
     setIngState(ingState)
   }, [])
 
-  //when box is checked set value to the name on input
+  //when box is checked set value to the name on input--> how does checked work
   const handleChecked = e => {
     console.log(e.target.checked)
     setIngState({check: e.target.checked}) //code breaks here

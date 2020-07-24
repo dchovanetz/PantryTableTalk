@@ -26,12 +26,12 @@ ul {
     text-shadow: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     /* margin-left: 240px; */
-    margin-left: 320px;  /*DC addition*/
+    margin-left: 25%;  /*DC addition*/
     padding: 3px 4px 3px 4px;
     font-size: 16px;
     letter-spacing: 0.1em;
 }
 
-ul:hover {
+.link:hover {
     color:#337ab7;
 }
