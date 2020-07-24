@@ -12,6 +12,17 @@ nav {
     top: 0px;
 }
 
+.navdiv {
+    text-shadow: black;
+    color: white;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /* margin-left: 240px; */
+    margin-left: 320px;  /*DC addition*/
+    padding: 3px 4px 3px 4px;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
 ul {
     text-shadow: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
