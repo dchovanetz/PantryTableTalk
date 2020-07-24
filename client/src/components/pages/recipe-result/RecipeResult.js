@@ -37,7 +37,7 @@ function RecipeResult() {
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
-    <Jumbotron>
+    <Jumbotron className="jumbo">
     <div className="recipe-card">
       <h1 className="recipe-name">{recipe.name}</h1>
       <img className="recipe-img"  src={recipe.image}></img>
