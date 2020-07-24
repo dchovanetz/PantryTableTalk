@@ -6,17 +6,26 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
+
+    
+
     <div className="navbarComponent" width="100%">
       <nav className="navbar navbar-dark bg-dark text-light">
-        <a className="navbar-brand" href="https://www.bastropfoodpantry.org/">
-          <img
-            className="top_logo"
-            src={logo}
-            alt="Bastrop County Food Pantry Logo"
+        <a className="navbar-brand" 
+          onClick={() => {
+            alert("You are leaving website.")
+            }
+          }
+          href="https://www.bastropfoodpantry.org/">
+            <img
+              className="top_logo"
+              src={logo}
+              alt="Bastrop County Food Pantry Logo"
           />
+
         </a>
 
-        <ul className="nav mr-auto">
+        <ul className="nav mr-auto link">
           {/* <li className="nav-item">
                             <a className="nav-link text-white" href="https://www.bastropfoodpantry.org/">HOME</a>
                         </li> */}
@@ -33,6 +42,10 @@ function Navbar() {
           <li className="nav-item">
             <a
               className="nav-link text-white"
+              onClick={() => {
+                alert("You are leaving website.")
+              }
+              }
               href="https://www.bastropfoodpantry.org/contact/"
             >
               CONTACT & LOCATION

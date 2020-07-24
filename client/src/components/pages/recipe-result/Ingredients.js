@@ -12,9 +12,9 @@ function Ingredients(props) {
 
 
   return (
-    <div>
+    <div className="imgDiv">
       <h2>Ingredients: </h2>
-        <ul>
+        <ul className="imgText">
           {props.ingredients.map((ingredient, i) => (<li key={"ing" + i + props.recipe_id}>{ingredient}</li>))}
         </ul>
     </div>

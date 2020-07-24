@@ -28,7 +28,7 @@ function RecipeHomepage() {
 
 
   return (
-    <div className = 'recipe'>
+    <div className = 'recipeHomepage'>
       {/* Recipe Search stays on top of recipe page so user can easily search for something else */}
       {/* <RecipeSearch /> */}
       {/* Switches between the search results and the individual recipe result */}
@@ -51,7 +51,7 @@ function RecipeHomepage() {
           })}
           </div>
         </Route>
-        <Route path="/recipe-maker" component={RecipeMaker} />
+        <Route path="/recipes/recipe-maker" component={RecipeMaker} />
         <Route path="/recipes/:id" component={RecipeResultApp} />
       </Switch>
     </div>
