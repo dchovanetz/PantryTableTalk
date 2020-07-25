@@ -41,7 +41,7 @@ function Navbar() {
         src={banner}
         alt="Bastrop County Food Pantry Banner"
         width="100%"
-        height="15%"
+        height="10%"
       />
   </div>
   );

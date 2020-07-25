@@ -1,6 +1,6 @@
 .layout{
     display: flex;
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     width: 75%;
     justify-content: center;
 }
@@ -8,7 +8,7 @@
 .recipeHomepage{
     display: flex;
     margin-top: 50px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
     justify-content: center;
 }

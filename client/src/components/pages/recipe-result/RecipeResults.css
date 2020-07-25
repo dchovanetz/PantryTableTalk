@@ -1,3 +1,11 @@
+@media screen and (max-width: 800px){
+    .recipe-img{
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+
 .jumbo {
     width: 100vw;
 }
@@ -30,6 +38,8 @@
     width: 25rem;
     border-right: 12px solid #F0AF12;
     border-bottom: 12px solid #F0AF12;
+    margin-left: -50%;
+    /* border: 2px dotted black */
 }
 
 .recipe-name {
@@ -41,6 +51,11 @@
     margin-bottom: 1em;
 }
 
+.div-instructions {
+    /* border: 2px solid yellow; */
+    position: relative;
+    margin-top: 1em;
+}
 
 .instructions {
     margin: 125px 0 10px 1em;
@@ -50,7 +65,8 @@
 .ol-instructions {
     /* list-style-type: none; */
     max-width: 80%;
-    padding-left: 3em
+    padding-left: 3em;
+    /* border: 2px solid grey; */
 }
 
 .li-instructions {

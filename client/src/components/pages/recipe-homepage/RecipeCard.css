@@ -17,7 +17,7 @@
     margin-left: 10pxpx;*/
     margin-bottom: 60px; 
     margin-left: 2px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     text-align: center;
     width: 33%;
 }
@@ -33,6 +33,14 @@
     line-height: 1.5;
 }
 
+.link-card:hover {
+    text-decoration: none;
+}
+
+.text:hover {
+    font-weight: 550;
+    /* color: #8bc34a; */
+}
 
 .imgClass{
     border-right: 12px solid #f0af12;

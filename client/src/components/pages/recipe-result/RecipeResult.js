@@ -46,12 +46,14 @@ function RecipeResult() {
       </div>
       <div className="recipe-card-content">
         <Ingredients ingredients={ingredients} recipe_id={_id}/>
+        <div className="div-instructions">
         <h2 className="instructions">Instructions:</h2>
         <ol className="ol-instructions">
           {instructions.map((instruction, i) => 
             <li className="li-instructions" key={"inst" + i + _id}>{instruction}</li>
           )}
         </ol>
+        </div>
         <YoutubeVideo />
       </div>
     </div>

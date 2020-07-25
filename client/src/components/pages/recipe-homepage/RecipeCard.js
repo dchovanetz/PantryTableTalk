@@ -21,7 +21,8 @@ function RecipeCard(props) {
           <Link to={`/recipes/${props.id}`}>
             <img className='imgClass' src={props.image} alt = 'recipe images'
             />
-         
+          </Link>
+          <Link className="link-card" to={`/recipes/${props.id}`}>
           <h3 className='text'>
             {props.title}
           </h3>
