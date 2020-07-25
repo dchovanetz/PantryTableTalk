@@ -24,8 +24,9 @@ function Navbar() {
       <Navbar2.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar2.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto navdiv">
+          <Nav.Link href="https://www.bastropfoodpantry.org/">HOME</Nav.Link>
           <Nav.Link href="/">RECIPES</Nav.Link>
-          <Nav.Link href="/shoppinglist">SHOPPING LIST</Nav.Link>
+          {/* <Nav.Link href="/shoppinglist">SHOPPING LIST</Nav.Link> */}
           <Nav.Link href="https://www.bastropfoodpantry.org/contact/" 
             onClick={() => {
               alert("You are leaving website.")

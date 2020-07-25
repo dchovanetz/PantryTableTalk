@@ -49,7 +49,7 @@ function RecipeResult() {
         <h2 className="instructions">Instructions:</h2>
         <ol className="ol-instructions">
           {instructions.map((instruction, i) => 
-            <li key={"inst" + i + _id}>{instruction}</li>
+            <li className="li-instructions" key={"inst" + i + _id}>{instruction}</li>
           )}
         </ol>
         <YoutubeVideo />

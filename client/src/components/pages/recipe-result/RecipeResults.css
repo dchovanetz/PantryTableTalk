@@ -14,7 +14,6 @@
 
 .serving-size {
     margin-left: 2em;
-   
     color: white;
     background: #F0AF12;
     padding: 0.5em 0.7em;
@@ -22,6 +21,7 @@
 
 .recipe-card {
     background-color: white;
+    font-size: 18px;
     
 }
 .recipe-img {
@@ -36,18 +36,23 @@
     /* display: block;
     float: right; */
     color:rgb(242, 169, 0);
-    font-family: BrandonGrotesqueWeb-Bold, Cambria, Georgia, serif;
+    font-family: Helvetica,Arial,sans-serif;
     margin-left: 0.5em;
     margin-bottom: 1em;
 }
 
 
-
 .instructions {
-    margin: 0 0 10px 1em;
+    margin: 125px 0 10px 1em;
     color: #72635D;
 }
 
 .ol-instructions {
-    list-style-type: none;
+    /* list-style-type: none; */
+    max-width: 80%;
+    padding-left: 3em
+}
+
+.li-instructions {
+    margin-bottom: 0.6em;
 }

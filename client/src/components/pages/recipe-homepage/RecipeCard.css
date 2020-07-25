@@ -24,13 +24,12 @@
 
 .text{
     color: #f0af12;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-family: Helvetica,Arial,sans-serif;
     text-transform: uppercase;
-    text-align: center;
+    text-align: right;
     margin-right: 20px;
     margin-top: 15px;
-    text-align: right;
     line-height: 1.5;
 }
 

@@ -1,3 +1,12 @@
+@media screen and (max-width: 800px) {
+    .top_logo {
+        width: 4.5rem;
+    }
+}
+
+
+
+
 nav {
     background-color: #333;;
 }
@@ -16,7 +25,7 @@ nav {
     text-shadow: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     /* margin-left: 240px; */
-    margin-left: 320px;  /*DC addition*/
+    margin-left: 200px;  /*DC addition*/
     padding: 3px 4px 3px 4px;
     font-size: 1.2em;
     letter-spacing: 0.1em;
