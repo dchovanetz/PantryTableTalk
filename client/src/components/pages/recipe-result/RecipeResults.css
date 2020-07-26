@@ -11,7 +11,7 @@
 }
 
 .imgbanner {
-    margin-bottom: -2em;
+    margin-bottom: -3em;
 }
 
 .img-repo {
@@ -30,7 +30,6 @@
 .recipe-card {
     background-color: white;
     font-size: 18px;
-    
 }
 .recipe-img {
     margin-left: 2em;
@@ -54,11 +53,12 @@
 .div-instructions {
     /* border: 2px solid yellow; */
     position: relative;
-    margin-top: 1em;
+    margin-top: 0.7em;
+    width: 85%
 }
 
 .instructions {
-    margin: 125px 0 10px 1em;
+    margin: 150px 0 10px 1em;
     color: #72635D;
 }
 
@@ -66,6 +66,15 @@
     /* list-style-type: none; */
     max-width: 80%;
     padding-left: 3em;
+    border: 2px solid grey;
+}
+
+.p-ctfb {
+    /* list-style-type: none; */
+    max-width: 80%;
+    padding-left: 2.5em;
+    color:rgb(242, 169, 0);
+    font-weight: 600;
     /* border: 2px solid grey; */
 }
 

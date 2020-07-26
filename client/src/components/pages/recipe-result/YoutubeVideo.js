@@ -1,16 +1,15 @@
 import React from "react";
 import './YoutubeVideo.css'
+import { PromiseProvider } from "mongoose";
 
-function YoutubeVideo() {
-          
-let url = "https://www.youtube.com/embed/wS8R5Bq9aFg?cc_load_policy=1"    
+function YoutubeVideo(props) {
   return (
 <div className="container" id="youtube">
 
 <iframe 
     width="560" 
     height="315" 
-    src= {url}
+    src= {props.video}
     frameBorder="0" 
     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
