@@ -12,7 +12,7 @@ function YoutubeVideo(props) {
     src= {props.video}
     frameBorder="0" 
     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
+    allowFullScreen>
 </iframe>
 </div>
 

@@ -21,10 +21,11 @@
 }
 
 .serving-size {
-    margin-left: 2em;
+    margin-left: 4.7em;
     color: white;
     background: #F0AF12;
-    padding: 0.5em 0.7em;
+    padding: 0.25em 0.7em;
+    font-weight: 600;
 }
 
 .recipe-card {
@@ -37,8 +38,12 @@
     width: 25rem;
     border-right: 12px solid #F0AF12;
     border-bottom: 12px solid #F0AF12;
-    margin-left: -50%;
+    /* margin-left: -50%; */
     /* border: 2px dotted black */
+}
+
+.recipe-card-content {
+    margin-left: 3em;
 }
 
 .recipe-name {
@@ -46,8 +51,9 @@
     float: right; */
     color:rgb(242, 169, 0);
     font-family: Helvetica,Arial,sans-serif;
-    margin-left: 0.5em;
-    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    padding-top: 1em;
 }
 
 .div-instructions {
@@ -58,7 +64,7 @@
 }
 
 .instructions {
-    margin: 150px 0 10px 1em;
+    margin: 50px 0 10px 1em;
     color: #72635D;
 }
 
@@ -66,7 +72,7 @@
     /* list-style-type: none; */
     max-width: 80%;
     padding-left: 3em;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
 }
 
 .p-ctfb {
