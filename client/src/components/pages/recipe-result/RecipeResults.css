@@ -38,8 +38,7 @@
     width: 25rem;
     border-right: 12px solid #F0AF12;
     border-bottom: 12px solid #F0AF12;
-    /* margin-left: -50%; */
-    /* border: 2px dotted black */
+
 }
 
 .recipe-card-content {
@@ -47,8 +46,6 @@
 }
 
 .recipe-name {
-    /* display: block;
-    float: right; */
     color:rgb(242, 169, 0);
     font-family: Helvetica,Arial,sans-serif;
     margin-left: 2em;
@@ -57,7 +54,6 @@
 }
 
 .div-instructions {
-    /* border: 2px solid yellow; */
     position: relative;
     margin-top: 0.7em;
     width: 85%
@@ -69,21 +65,25 @@
 }
 
 .ol-instructions {
-    /* list-style-type: none; */
     max-width: 80%;
     padding-left: 3em;
-    /* border: 2px solid grey; */
 }
 
 .p-ctfb {
-    /* list-style-type: none; */
     max-width: 80%;
     padding-left: 2.5em;
     color:rgb(242, 169, 0);
     font-weight: 600;
-    /* border: 2px solid grey; */
 }
 
 .li-instructions {
     margin-bottom: 0.6em;
+}
+
+.p-noVideo {
+    margin-top: 55px;
+    padding-bottom: 55px;
+    font-size: 40px;
+    color: #72635D;
+    text-align: center;
 }

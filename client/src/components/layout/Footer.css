@@ -5,14 +5,12 @@
     width: 100%;
 }
 
-#footer-list {
-    margin-left: 100px;
+.line {
+    width: 101%;
 }
 
-.line{
-    width: 100%;
-    /* justify-content: center; */
-    /* border: 1px solid red; */
+#footer-list {
+    margin-left: 100px;
 }
 
 #greenLine {

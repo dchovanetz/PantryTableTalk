@@ -43,6 +43,10 @@ function RecipeResult() {
     youTube_Url,
   } = recipe;
 
+
+//variable to check if youTUbe video is available--> for if/else statement
+  const youTube = recipe.youTube_Url 
+
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
@@ -60,12 +64,13 @@ function RecipeResult() {
             Recipes are provided by the Central Texas Food Bank in accordance
             with the Healthy Pantry Initiative Program.
           </p>
-          <YoutubeVideo video={youTube_Url} />
         </div>
-        <p className="p-ctfb">Cooking demonstration video coming soon!</p>
-        {recipe.youTube_Url != "" &&
-          <YoutubeVideo video={recipe.youTube_Url} />
+        <div className="container">
+        {youTube 
+        ? <YoutubeVideo video={youTube} />
+        : <p className="p-noVideo">Cooking demonstration video coming soon!</p>
         }
+        </div>
       </div>
     </Jumbotron>
   );

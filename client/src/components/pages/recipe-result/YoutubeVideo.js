@@ -6,8 +6,8 @@ function YoutubeVideo(props) {
 <div className="container" id="youtube">
 
 <iframe 
-    width="560" 
-    height="315" 
+    width="600" 
+    height="375" 
     src= {props.video}
     frameBorder="0" 
     allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
