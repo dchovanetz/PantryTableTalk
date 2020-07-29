@@ -13,9 +13,9 @@ function Ingredients(props) {
 
 
   return (
-    <div className="imgDiv">
+    <div className="ingDiv">
       <h2 className="ingredients">Ingredients: </h2>
-        <ul className="imgText">
+        <ul className="ingText">
           {props.ingredients.map((ingredient, i) => (<li key={"ing" + i + props.recipe_id}>{ingredient}</li>))}
         </ul>
     </div>

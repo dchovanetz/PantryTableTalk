@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Ingredients from "./Ingredients";
+import Instructions from "./Instructions";
 import YoutubeVideo from "./YoutubeVideo";
 import axios from "axios";
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import './RecipeResults.css';
+import Jumbotron from "react-bootstrap/Jumbotron";
+import "./RecipeResults.css";
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
 function RecipeResult() {
@@ -32,33 +33,37 @@ function RecipeResult() {
       });
   }, []);
 
-  const { ingredients, instructions, _id } = recipe;
+  const {
+    ingredients,
+    instructions,
+    _id,
+    name,
+    servings,
+    image,
+    youTube_Url,
+  } = recipe;
 
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
     <Jumbotron className="jumbo">
-    <div className="recipe-card">
-      <h1 className="recipe-name">{recipe.name}</h1>
-      <span className="serving-size">Servings: {recipe.servings}</span>
-      <div className="img-repo">
-      <img className="recipe-img"  src={recipe.image} alt={`${recipe.name}`}></img>
-      </div>
-      <div className="recipe-card-content">
-        <Ingredients ingredients={ingredients} recipe_id={_id}/>
-        <div className="div-instructions">
-        <h2 className="instructions">Instructions:</h2>
-        <ol className="ol-instructions">
-          {instructions.map((instruction, i) => 
-            <li className="li-instructions" key={"inst" + i + _id}>{instruction}</li>
-          )}
-        </ol>
+      <div className="recipe-card">
+        <h1 className="recipe-name">{name}</h1>
+        <span className="serving-size">Servings: {servings}</span>
+        <div className="img-repo">
+          <img className="recipe-img" src={image} alt={`${name}`}></img>
         </div>
-        <p className="p-ctfb">Recipes are provided by the Central Texas Food Bank in accordance with the Healthy Pantry Initiative Program.</p>
-        <YoutubeVideo video={recipe.youTube_Url} />
+        <div className="recipe-card-content">
+          <Ingredients ingredients={ingredients} recipe_id={_id} />
+          <Instructions instructions={instructions} recipe_id={_id} />
+          <p className="p-ctfb">
+            Recipes are provided by the Central Texas Food Bank in accordance
+            with the Healthy Pantry Initiative Program.
+          </p>
+          <YoutubeVideo video={youTube_Url} />
+        </div>
       </div>
-    </div>
-  </Jumbotron>
+    </Jumbotron>
   );
 }
 
