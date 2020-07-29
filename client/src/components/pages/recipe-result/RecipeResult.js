@@ -55,7 +55,9 @@ function RecipeResult() {
         </ol>
         </div>
         <p className="p-ctfb">Recipes are provided by the Central Texas Food Bank in accordance with the Healthy Pantry Initiative Program.</p>
-        <YoutubeVideo video={recipe.youTube_Url} />
+        {recipe.youTube_Url != "" &&
+          <YoutubeVideo video={recipe.youTube_Url} />
+        }
       </div>
     </div>
   </Jumbotron>
