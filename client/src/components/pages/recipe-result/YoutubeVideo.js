@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './YoutubeVideo.css'
 
 function YoutubeVideo(props) {
   //variable to check if youTUbe video is available--> for if/else statement
 const youTube = props.video
+useEffect(()=> {
+  console.log(youTube)
+}, [])
  
 if (youTube) {
   return (
@@ -18,7 +21,9 @@ if (youTube) {
       </iframe>
   )
 } else {
-  return <p className="p-noVideo">Cooking demonstration video coming soon!</p>
+  return (
+  <p className="p-noVideo">Cooking demonstration video coming soon!</p>
+  )
 };
 }
 
