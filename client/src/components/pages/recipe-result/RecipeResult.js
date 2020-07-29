@@ -4,6 +4,7 @@ import Instructions from "./Instructions";
 import YoutubeVideo from "./YoutubeVideo";
 import axios from "axios";
 import Jumbotron from "react-bootstrap/Jumbotron";
+import QRCode from "qrcode.react"
 import "./RecipeResults.css";
 
 //Title, img, nutrition facts, topic tag, ingredients, serving size, video
@@ -71,6 +72,8 @@ function RecipeResult() {
         : <p className="p-noVideo">Cooking demonstration video coming soon!</p>
         }
         </div>
+
+        <QRCode value={window.location.href} />
       </div>
     </Jumbotron>
   );
