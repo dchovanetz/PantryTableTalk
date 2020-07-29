@@ -7,7 +7,6 @@ const youTube = props.video
  
 if (youTube) {
   return (
-    <div className="container" id="youtube">
       <iframe 
           width="600" 
           height="375" 
@@ -17,7 +16,6 @@ if (youTube) {
           allowFullScreen
           title={`Video of ${props.name}`}>
       </iframe>
-    </div>
   )
 } else {
   return <p className="p-noVideo">Cooking demonstration video coming soon!</p>
