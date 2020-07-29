@@ -7,7 +7,6 @@ app.use(cors())
 const recipeScraper = require("recipe-scraper");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const QRCode = require("qrcode");
 
 const items = require("./routes/api/itemsRoutes");
 const recipes = require("./routes/api/recipeRoutes");
