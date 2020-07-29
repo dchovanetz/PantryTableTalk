@@ -42,11 +42,6 @@ function RecipeResult() {
     image,
     youTube_Url,
   } = recipe;
-
-
-//variable to check if youTUbe video is available--> for if/else statement
-  const youTube = recipe.youTube_Url 
-
   // const {topicTag, servingSize, nutritionFacts, ingredients, videoUrl} = this.props;//assuming that we can get this from consuming APIs
   //do we need to map out the ingredients
   return (
@@ -66,10 +61,7 @@ function RecipeResult() {
           </p>
         </div>
         <div className="container">
-        {youTube 
-        ? <YoutubeVideo video={youTube} />
-        : <p className="p-noVideo">Cooking demonstration video coming soon!</p>
-        }
+          <YoutubeVideo video={recipe.youTube_Url} />
         </div>
       </div>
     </Jumbotron>
