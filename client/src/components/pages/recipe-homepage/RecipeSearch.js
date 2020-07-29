@@ -26,11 +26,6 @@ const RecipeSearch = () => {
     });
   };
 
-  // let {ingredients} = formData;
-
-  // let displayData = formData.map(el => {
-  //   return <li>el.ingredients</li>
-  // })
 
   return (
     <form className="form" onSubmit={handleSubmit}>
