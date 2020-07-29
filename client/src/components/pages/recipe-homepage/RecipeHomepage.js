@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import RecipeSearch from "./RecipeSearch";
+import RecipeSearch from "./RecipeSearch";
 // import RecipeSearchResults from "./RecipeSearchResults.js";
 import RecipeCard from "./RecipeCard";
 import RecipeMaker from "./RecipeMaker";
 import "./RecipeHomepage.css";
 import RecipeResultApp from "../recipe-result/RecipeResult";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 function RecipeHomepage() {
@@ -15,7 +15,6 @@ function RecipeHomepage() {
   useEffect(() => {
     let url = "http://localhost:5000/api/recipes/";
 
-    let myRecipes = {};
     axios
       .get(url)
       .then((response) => {
@@ -28,9 +27,10 @@ function RecipeHomepage() {
 
 
   return (
-    <div className = 'recipeHomepage'>
+    <Router>
+      <div className = 'recipeHomepage'>
       {/* Recipe Search stays on top of recipe page so user can easily search for something else */}
-      {/* <RecipeSearch /> */}
+      <RecipeSearch />
       {/* Switches between the search results and the individual recipe result */}
 
       <Switch>
@@ -56,6 +56,7 @@ function RecipeHomepage() {
       </Switch>
  
     </div>
+    </Router>
   );
 }
 

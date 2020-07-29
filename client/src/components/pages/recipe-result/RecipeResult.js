@@ -42,7 +42,7 @@ function RecipeResult() {
       <h1 className="recipe-name">{recipe.name}</h1>
       <span className="serving-size">Servings: {recipe.servings}</span>
       <div className="img-repo">
-      <img className="recipe-img"  src={recipe.image}></img>
+      <img className="recipe-img"  src={recipe.image} alt={`${recipe.name}`}></img>
       </div>
       <div className="recipe-card-content">
         <Ingredients ingredients={ingredients} recipe_id={_id}/>
